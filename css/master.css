@@ -365,6 +365,10 @@ header nav .form i {
     position: relative;
     border-radius: 0 0 30px 30px;
     background-attachment:fixed;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
 }
 
 @media (max-width: 1086px) {
@@ -463,8 +467,9 @@ header nav .form i {
     border: 1px solid white;
     border-radius: 50px;
     margin-right: 10px;
+    cursor: pointer;
 }
-.landing .bullets li.active-2{
+.landing .bullets li.active{
 background-color: var(--main-color);
 border-color: var(--main-color);
 }

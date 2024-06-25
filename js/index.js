@@ -103,46 +103,104 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    var landing = document.querySelector('.landing');
+    var bullets = document.querySelectorAll('.bullets li');
+    var backgroundIndex = 0; // Index of the current background image
 
-        document.addEventListener('DOMContentLoaded', function () {
-            var landing = document.querySelector('.landing');
-            var bullets = document.querySelectorAll('.bullets li');
-            var backgroundIndex = 0; // Index of the current background image
+    var backgrounds = [
+        'url(../images/landing/img1.png)',
+        'url(../images/landing/img2.png)',
+        'url(../images/landing/img6.png)',
+        'url(../images/landing/img4.png)',
+        // Add more background images as needed
+    ];
 
-            var backgrounds = [
-                'url(../images/landing/img1.png)',
-                'url(../images/landing/img2.png)',
-                'url(../images/landing/img6.png)',
-                'url(../images/landing/img4.png)',
-                // Add more background images as needed
-            ];
+    function changeBackground(index) {
+        backgroundIndex = index;
 
-            function changeBackground(direction) {
-                if (direction === 'left') {
-                    backgroundIndex = (backgroundIndex - 1 + backgrounds.length) % backgrounds.length;
-                } else {
-                    backgroundIndex = (backgroundIndex + 1) % backgrounds.length;
-                }
+        landing.style.backgroundImage = backgrounds[backgroundIndex];
 
-                landing.style.backgroundImage = backgrounds[backgroundIndex];
+        // Remove the "active" class from all bullets
+        bullets.forEach(function (bullet) {
+            bullet.classList.remove('active');
+        });
 
-                // Remove the "active-2" class from all bullets
-                bullets.forEach(function (bullet) {
-                    bullet.classList.remove('active-2');
-                });
+        // Add the "active" class to the current bullet
+        bullets[backgroundIndex].classList.add('active');
+    }
 
-                // Add the "active-2" class to the current bullet
-                bullets[backgroundIndex].classList.add('active-2');
+    // Add event listeners to the bullets
+    bullets.forEach(function (bullet, index) {
+        bullet.addEventListener('click', function () {
+            changeBackground(index);
+        });
+    });
+
+    // Change background on left/right arrow click
+    document.querySelector('.fa-angle-left').addEventListener('click', function () {
+        var newIndex = (backgroundIndex - 1 + backgrounds.length) % backgrounds.length;
+        changeBackground(newIndex);
+    });
+
+    document.querySelector('.fa-angle-right').addEventListener('click', function () {
+        var newIndex = (backgroundIndex + 1) % backgrounds.length;
+        changeBackground(newIndex);
+    });
+
+    // Variables to store the touch start position and time
+    var startX, startY, startTime;
+
+    // Function to handle touch start event
+    function handleTouchStart(event) {
+        startX = event.touches[0].clientX;
+        startY = event.touches[0].clientY;
+        startTime = new Date().getTime();
+    }
+
+    // Function to handle touch move event
+    function handleTouchMove(event) {
+        if (!startX || !startY) {
+            return;
+        }
+
+        var endX = event.touches[0].clientX;
+        var endY = event.touches[0].clientY;
+
+        var diffX = startX - endX;
+        var diffY = startY - endY;
+
+        // Check if the swipe is mostly horizontal and exceeds the threshold
+        if (Math.abs(diffX) > Math.abs(diffY) && Math.abs(diffX) > 30) {
+            if (diffX > 0) {
+                // Swipe left
+                var newIndex = (backgroundIndex + 1) % backgrounds.length;
+                changeBackground(newIndex);
+            } else {
+                // Swipe right
+                var newIndex = (backgroundIndex - 1 + backgrounds.length) % backgrounds.length;
+                changeBackground(newIndex);
             }
 
-            document.querySelector('.fa-angle-left').addEventListener('click', function () {
-                changeBackground('left');
-            });
+            // Reset values
+            startX = null;
+            startY = null;
+        }
+    }
 
-            document.querySelector('.fa-angle-right').addEventListener('click', function () {
-                changeBackground('right');
-            });
-        });
+    // Function to handle touch end event
+    function handleTouchEnd(event) {
+        startX = null;
+        startY = null;
+    }
+
+    // Add touch event listeners to the landing element
+    landing.addEventListener('touchstart', handleTouchStart, false);
+    landing.addEventListener('touchmove', handleTouchMove, false);
+    landing.addEventListener('touchend', handleTouchEnd, false);
+});
+
+
 
 
 
