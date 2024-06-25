@@ -358,10 +358,17 @@ header nav .form i {
 .landing{
     min-height: 100vh;
     background-color: #607d8b;
-    background-image: url(../images/cool-berlin-wallpaper-83635-wallpaper-preview.jpg);
+    background-image: url(../images/landing/img2.png);
     background-size: cover;
     position: relative;
     border-radius: 0 0 30px 30px;
+    background-attachment:fixed;
+}
+
+@media (max-width: 1086px) {
+    .landing{
+        background-position-x: 50%;
+    }
 }
 
 .overlay{

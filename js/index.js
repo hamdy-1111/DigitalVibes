@@ -37,8 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-
-
 function observeAndAnimate(element, className) {
     var observer = new IntersectionObserver(function (entries) {
         if (entries[0].isIntersecting) {
@@ -112,9 +110,10 @@ document.addEventListener('DOMContentLoaded', function () {
             var backgroundIndex = 0; // Index of the current background image
 
             var backgrounds = [
-                'url(../images/cool-berlin-wallpaper-83635-wallpaper-preview.jpg)',
-                'url(../images/wp12400806.webp)',
-                'url(../images/nice.jpg)', // Add your additional background images here
+                'url(../images/landing/img1.png)',
+                'url(../images/landing/img2.png)',
+                'url(../images/landing/img6.png)',
+                'url(../images/landing/img4.png)',
                 // Add more background images as needed
             ];
 
