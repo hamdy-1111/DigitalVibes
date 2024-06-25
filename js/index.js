@@ -37,25 +37,41 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-function observeAndAnimate(element, className) {
+function observeAndAnimate(element, animateClass, staticClass) {
     var observer = new IntersectionObserver(function (entries) {
         if (entries[0].isIntersecting) {
-            element.classList.add(className);
-            observer.disconnect();
+            element.classList.add(animateClass);
+            element.classList.remove(staticClass);
+        } else {
+            element.classList.remove(animateClass);
+            element.classList.add(staticClass);
         }
     });
+
+    // Initial check in case element is already in view on page load
     observer.observe(element);
 }
 
 document.addEventListener('DOMContentLoaded', function () {
     var designAmni = document.getElementById('design_amni');
     var landCont = document.getElementById('land_cont');
-    var servicesSection = document.getElementById('servicesSection');
+    var servicesSection = document.querySelector('.services-container');
+    var titlefade = document.querySelector('.titlefade');
+    var titlefade2 = document.querySelector('.titlefade2');
+    var titlefade3 = document.querySelector('.titlefade3');
+    var aboutText = document.querySelector('.about-content');
+    var aboutText2 = document.querySelector('.about-content2');
 
-    observeAndAnimate(designAmni, 'animate');
-    observeAndAnimate(landCont, 'animate');
-    observeAndAnimate(servicesSection, 'animate');
+    observeAndAnimate(designAmni, 'animate', 'static');
+    observeAndAnimate(landCont, 'animate', 'static');
+    observeAndAnimate(servicesSection, 'animate', 'static');
+    observeAndAnimate(titlefade, 'animate', 'static');
+    observeAndAnimate(titlefade2, 'animate', 'static');
+    observeAndAnimate(titlefade3, 'animate', 'static');
+    observeAndAnimate(aboutText, 'animate', 'static');
+    observeAndAnimate(aboutText2, 'animate', 'static');
 });
+
 
 
 
