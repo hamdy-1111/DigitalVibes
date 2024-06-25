@@ -134,3 +134,16 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleAnimationOnScroll('animate-slide-in-right', 'visible');
     toggleAnimationOnScroll('animate-color-change', 'visible');
 });
+
+/* #######################          ????????????   *   ????????????          ####################### */
+function setVhProperty() {
+    var vh = window.innerWidth * 0.01;
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+}
+
+// Set the initial value
+setVhProperty();
+
+// Update the value on resize
+window.addEventListener('resize', setVhProperty);
+/* #######################          ????????????   *   ????????????          ####################### */

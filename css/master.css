@@ -21,6 +21,7 @@ body{
 font-family: 'Poppins', sans-serif;
 font-family: 'Work Sans', sans-serif;
 background-color: #181828;
+overflow-x: hidden;
 }
 ::-moz-selection {
     background: #c4d0b6;
@@ -63,6 +64,7 @@ background-color: #181828;
 ul{
     list-style: none;
 }
+
 /* END GLOPAL RULES */
 /* START HEADER */
 .container{
@@ -358,7 +360,7 @@ header nav .form i {
 .landing{
     min-height: 100vh;
     background-color: #607d8b;
-    background-image: url(../images/landing/img2.png);
+    background-image: url(../images/landing/img1.png);
     background-size: cover;
     position: relative;
     border-radius: 0 0 30px 30px;
