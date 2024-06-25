@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital vibe</title>
+    <link rel="icon" type="image/x-icon" href="images/logo/logo svg transparent.svg">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d36d507b4c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/master.css">
+    <style>
+body {
+    background:#000; /* Gradient from dark red to gold */
+    background-blend-mode: overlay; /* Blend mode to add an overlay effect */
+}
+
+:root{
+    --main-color: #19c8fa;
+    --transparent-color: rgba(15, 115, 143, 0.377);
+    --text-color:#bbbbbb;
+    --section-padding: 100px;
+}
+.services{
+    padding-top: 250px  ;
+    padding-bottom: var(--section-padding);
+}
+        .main-heading p{
+            margin-bottom: 30px;
+        }
+.main-heading h2{
+    color: #000;
+        text-shadow: 1px 8px 20px var(--main-color);
+}
+
+.main-heading h2::before{
+    background-color: #000;
+    box-shadow: 0 0 30px #fff;
+}
+.main-heading h2::after{
+    background-color: #000;
+    box-shadow: 0 0 20px var(--main-color);
+    border-color: var(--main-color);
+}
+.main-heading p{
+    color: var(--text-color);
+}
+/* Add your global CSS styles here */
+
+/* Example style for the element when it comes into view */
+/* Animation 1 */
+.animate-slide-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate-slide-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation 2 */
+.animate-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.animate-scale.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animation 3 */
+.animate-fade-in {
+    opacity: 0;
+    transition: opacity 1.3s ;
+}
+
+.animate-fade-in.visible {
+    opacity: 1;
+}
+
+
+/* Animation 5 */
+.animate-bounce {
+    opacity: 0;
+    transform: translateY(0);
+    animation: bounce 0.5s ease;
+}
+
+.animate-bounce.visible {
+    opacity: 1;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(20px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* Animation 6 */
+.animate-flip {
+    opacity: 0;
+    transform: rotateX(90deg);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-flip.visible {
+    opacity: 1;
+    transform: rotateX(0);
+}
+
+/* Animation Keyframes */
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-right {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-30px);
+    }
+    60% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes color-change {
+    0% {
+        color: #4b134f;
+    }
+    50% {
+        color: #c94b4b;
+    }
+    100% {
+        color: #4b134f;
+    }
+}
+
+/* Animated Classes */
+.animate-slide-in-left {
+    animation: slide-in-left 1s ease-out forwards;
+}
+
+.animate-slide-in-left.visible {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.animate-slide-in-right {
+    animation: slide-in-right 1s ease-out forwards;
+}
+
+.animate-slide-in-right.visible {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.animate-bounce {
+    animation: bounce 1s ease-out forwards;
+}
+
+.animate-bounce.visible {
+    transform: translateY(0);
+}
+
+.animate-rotate {
+    animation: rotate 2s linear infinite;
+}
+
+.animate-rotate.visible {
+    transform: rotate(0deg);
+}
+
+.animate-color-change {
+    animation: color-change 2s ease-in-out infinite;
+}
+
+.animate-color-change.visible {
+    color: #4b134f;
+}
+
+
+
+
+
+
+
+
+
+.section-head-text {
+  font-size: 35px;
+  font-weight: 700;
+  color: rgb(0, 135, 177);
+  margin: 0 0 10px 0;
+}
+
+.section-subhead-text {
+  font-size: 25px;
+  color: rgb(153, 153, 153);
+  line-height: 35px;
+  max-width: 470px;
+  text-align: center;
+  margin: 0 0 60px 0;
+}
+
+.img-wrapper {
+  width: 250px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.team-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  user-select: none;
+  padding-bottom: 20px;
+}
+
+.social-media-links {
+  width: 125px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.name,
+.position {
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0 0 5px 0;
+}
+
+.name {
+  color: rgb(102, 102, 102);
+}
+
+.position {
+  color: rgb(0, 135, 177);
+  text-align: center;
+}
+
+.team-img {
+  width: 250px;
+  border-radius: 50%;
+    filter: blur(1px);
+  transition: .5s;
+}
+.team-img:hover{
+    transform: scale(1.1);
+    filter: blur(0);
+}
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.team-card {
+  width: 280px;
+  margin: 0 0 40px 0;
+}
+i{
+    padding-top: 10px;
+    color: #777;
+    transition: .5s;
+    font-size: larger;
+    margin-bottom: 10px;
+}
+i:hover{
+    color: #333;
+    margin-bottom: 5px;
+    transform: translateY(-5px);
+}
+
+
+.inner-container {
+  max-width: 1320px;
+  margin: 50px auto;
+}
+
+@media (max-width: 500px) {
+  .outer-container {
+    padding: 10px 20px;
+  }
+}
+footer{
+    margin-top: 10px;
+}
+
+#btn{
+  padding: 10px 20px;
+  text-transform: uppercase;
+  border-radius: 8px;
+  font-size: 17px;
+  font-weight: 500;
+  color: #ffffff80;
+  text-shadow: none;
+  background: transparent;
+  cursor: pointer;
+  box-shadow: transparent;
+  border: 1px solid #ffffff80;
+  transition: 0.5s ease;
+  user-select: none;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: -90px;
+}
+
+#btn:hover,
+#btn:focus {
+  color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 100px #008cff;
+}
+
+
+
+
+        .scroll-progress {
+            position: absolute;
+            top: 300px;
+            left: 170px;
+            height: 0; /* Adjust the height of the progress bar */
+            width: 10px; /* Initially set the width to 0 */
+            background: linear-gradient( #022d8a,#022d8a,#022d8a,#022d8a,#022d8a,#022d8a, #cc00ff , #cc00ff , #ae419c); /* Set the color of the progress bar */
+            z-index: 9995; /* Ensure the progress bar is above other content */
+            border-radius: 20px;
+            transition: height 0.3s; /* Add transition effect for smoother appearance */
+        }
+
+        .scroll-line {
+            position: absolute;
+            top: 300px; /* Adjust the position of the line */
+            left: 170px; /* Adjust the position of the line */
+            width: 10px; /* Adjust the width of the line */
+            height: 2190px; /* Adjust the height of the line */
+            background-color: #333; 
+            z-index: 9994;
+            border-radius: 20px;
+        }
+
+        .icon {
+            position: absolute;
+            left: 160px; 
+            width: 30px; /* Adjust the size of the icons */
+            height: 30px; /* Adjust the size of the icons */
+            background-color: #000;
+            border-radius: 50%; /* Make the icons circular */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            transition: box-shadow 1.5s;
+        }
+        @media (max-width: 1460px) {
+        .scroll-progress {
+            position: absolute;
+            left: 60px;
+        }
+
+        .scroll-line {
+            position: absolute;
+            left: 60px; /* Adjust the position of the line */
+        }
+
+        .icon {
+            position: absolute;
+            left: 50px; 
+        }
+  }
+          @media (max-width: 670px) {
+        .scroll-progress {
+display: none;
+        }
+
+        .scroll-line {
+display: none;
+
+        }
+
+        .icon {
+display: none;
+
+        }
+  }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo soundButton fileLink" data-sound="clickSoundGroup3"><img src="images/logo/dv.png" style="width: 50px; border-radius: 50%;" alt=""></a>
+            <nav>
+                <i class="fas fa-bars " id="toggle-menu"></i>
+                <ul id="myList" class="">
+                    <li><a href="service.html" class="soundButton fileLink" data-sound="clickSoundGroup3">Services</a></li>
+                    <li><a href="portfolio.html" class="soundButton fileLink" data-sound="clickSoundGroup3">portfolio</a></li>
+                    <li><a href="pricing.html" >Pricing</a></li>
+                    <li><a href="" class="soundButton fileLink" data-sound="clickSoundGroup3">community <span class="soon" style="left: -15px; top: -15px;">soon</span></a></li>
+                    <li><a href="contact.html" >Contact</a></li>
+                </ul>
+                    <button class="loginBtn">
+                        <div class="sign"><svg viewBox="0 0 512 512"><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg></div>
+                        <div class="text">Login</div>
+                    </button>
+                    <span class="soon ed" style="height: 19.2px; top: 6px; left: -5px; ">soon</span>
+            </nav>
+        </div>
+    </header>
+    <div class="scroll-progress" id="scrollProgress"></div>
+    <div class="scroll-line"></div>
+        <div class="icon" style="top: 300px; box-shadow: 0 0 15px red; border: 1px solid red;"><i class="fa-solid fa-question" style="color: red;"><a href=""></a></i></div>
+        <div class="icon" id="mission-icon" style="top: 1250px;  border: 1px solid green;"><i class="fas fa-bullseye" style="color: green;"></i></div>
+        <div class="icon" id="team-icon" style="top: 1890px; border: 1px solid ;"><i class="fas fa-users" style="color: yellow;"></i></div>
+yellow
+<!--     <section id="about">
+        <div class="container">
+            <div class="about-content">
+                <h1 class="main-heading">About Digital Vibe</h1>
+                <p>Welcome to Digital Vibe, where innovation meets excellence. Founded in 2005, Digital Vibe has emerged as a leading provider of digital solutions, catering to clients worldwide. Our journey began with a vision to transform businesses through cutting-edge technology and creative brilliance.</p>
+                <p>At Digital Vibe, we believe in the power of digital transformation to drive growth, enhance efficiency, and unlock new opportunities. With a diverse team of experts and a passion for innovation, we deliver custom solutions tailored to the unique needs of each client.</p>
+                <p>Our commitment to quality, integrity, and customer satisfaction sets us apart in the competitive landscape. We take pride in our ability to exceed expectations, delivering results that resonate with our clients and their audiences.</p>
+                <h2>Our Mission</h2>
+                <p>Our mission at Digital Vibe is to empower businesses with transformative digital solutions that drive success in the digital age. We strive to harness the latest technologies and creative strategies to deliver measurable results and create lasting value for our clients.</p>
+                <h2>Our Team</h2>
+                <p>Meet the passionate individuals behind Digital Vibe's success. Our team brings together a diverse range of talents, including developers, designers, marketers, and strategists, united by a shared commitment to excellence.</p>
+                <h2>Get in Touch</h2>
+                <p>Ready to take your digital presence to the next level? Contact us today to discuss your project requirements and discover how Digital Vibe can help you achieve your business objectives.</p>
+                <a href="contact.html" class="btn btn-primary">Contact Us</a>
+            </div>
+        </div>
+    </section> -->
+    <div class="services" id="about">
+        <div class="container">
+            <div class="main-heading ">
+                <h2 class="animate-slide-up animate-bounce">About Digital Vibe</h2>
+                <p class="animate-slide-in-right animate-scale">Welcome to Digital Vibe, where innovation meets excellence. Founded in 2005, Digital Vibe has emerged as a leading provider of digital solutions, catering to clients worldwide. Our journey began with a vision to transform businesses through cutting-edge technology and creative brilliance.</p>
+                <p class="animate-slide-in-left animate-scale">At Digital Vibe, we believe in the power of digital transformation to drive growth, enhance efficiency, and unlock new opportunities. With a diverse team of experts and a passion for innovation, we deliver custom solutions tailored to the unique needs of each client.</p>
+                <p class="animate-slide-in-right animate-scale">Our commitment to quality, integrity, and customer satisfaction sets us apart in the competitive landscape. We take pride in our ability to exceed expectations, delivering results that resonate with our clients and their audiences.</p>            </div>
+        </div>
+    </div>
+<div class="services" id="mission">
+    <div class="container">
+        <div class="main-heading">
+                <h2 class="animate-slide-in-left">Our Mission</h2>
+                <p class="animate-scale">Our mission at Digital Vibe is to empower businesses with transformative digital solutions that drive success in the digital age. We strive to harness the latest technologies and creative strategies to deliver measurable results and create lasting value for our clients.</p>
+        </div>
+    </div>
+</div>
+<div class="services animate-slide-in-left" id="team">
+    <div class="container">
+            <div class="main-heading">
+                <h2>Our Team</h2>
+                <p class="animate-scale">Meet the passionate individuals behind Digital Vibe's success. Our team brings together a diverse range of talents, including developers, designers, marketers, and strategists, united by a shared commitment to excellence.</p>
+        </div>
+    </div>
+<div class="container animate-slide-in-left animate-scale" >
+  <div class="inner-container">
+    <div class="container team-container">
+      <div class="team-card">
+        <div class="img-wrapper">
+          <img class="team-img" src="images/team/hamdy.jpg"  style="height: 232px;">
+        </div>
+        <p class="name">
+          Hamdy El-menshawi
+        </p>
+        <p class="position">
+          front-end developer
+        </p>
+        <div class="social-media-links">
+            <a target="_blank" href="https://www.facebook.com/noopsaibot"><i class="fab fa-facebook-f"></i></a>
+            <a target="_blank" href="https://twitter.com/HamdyELmenshawi?fbclid=IwZXh0bgNhZW0CMTAAAR1NkDgsnMbGivXkzslL-lJVWumh7mp4Luu3kamAQaiASdyfqxMXcPI_YdI_aem_Af77VsfVIQaaa7paWYW1n-ZJi-tLLF0XyjeJl_aNOjkPMntk51uAsyGx2b3hpA2Yh6bl_rErVPUtUjDWGJVphCqq"><i class="fab fa-twitter"></i></a>
+            <a target="_blank" href="https://www.instagram.com/hamdyelmenshawei?fbclid=IwZXh0bgNhZW0CMTAAAR22Kiui4Xj-_lIbYsIHJnQSpSthbkNcMIumew5wWwizLNr0L9n-Nqylhrg_aem_Af430lv8iu7KcNAvUkqjKZJ1UDr-yhR-zhvogzjDc-fXYqRZYqj2_NafE1UZE7BK88Gtu50i1-XEfPZ91KsKCpO5"><i class="fab fa-instagram"></i></a>
+            <a target="_blank" href="www.linkedin.com/in/noopsaibot"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="social-media-links" style="margin-top: -10px;">
+            <a class="footer-call-to-action-link" href="tel:+201080876548" target="_self"><i class="fa-solid fa-phone"></i></a>
+            <a href="https://discordapp.com/users/noopsaibot909" target="_blank" class="contact-icon"><i class="fa-brands fa-discord"></i></a>
+            <a href="https://wa.me/1080876548" target="_blank" class="contact-icon"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="https://m.me/noopsaibot" target="_blank" class="contact-icon"><i class="fa-brands fa-facebook-messenger"></i></a>
+        </div>
+        </div>
+            <div class="team-card">
+        <div class="img-wrapper">
+          <img class="team-img" src="https://static1.pocketlintimages.com/wordpress/wp-content/uploads/148310-tv-feature-what-order-should-you-watch-the-fast-and-furious-films-in-image1-rzgajwfo2x.jpg" style="height: 232px;">
+        </div>
+        <p class="name">
+          ammar ramadan
+        </p>
+        <p class="position">
+          back-end developer 
+        </p>
+        <div class="social-media-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+            <div class="team-card">
+        <div class="img-wrapper">
+          <img class="team-img" src="https://wallpapercave.com/wp/wp1867294.jpg" style="height: 232px;">
+        </div>
+        <p class="name">
+          Maxwell Doe
+        </p>
+        <p class="position">
+          Instructor
+        </p>
+        <div class="social-media-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+            <div class="team-card">
+        <div class="img-wrapper">
+          <img class="team-img" src="https://www.pixel4k.com/wp-content/uploads/2020/08/john-wick_1596931158.jpg" style="height: 232px;">
+        </div>
+        <p class="name">
+          Maxwell Doe
+        </p>
+        <p class="position">
+          Instructor
+        </p>
+        <div class="social-media-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <!-- More team cards here -->
+    </div>
+  </div>
+</div>
+</div>
+<a id="btn" href="contact.html">contact us</a>
+
+
+    
+  <footer class="footer">
+     <div class="container">
+      <div class="row" style="gap: 0;">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="service.html">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="FaQs.html">FAQ</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="pricing.html">buy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>location</h4>
+          <ul>
+            <li><a class="footer-location-address" href="https://www.google.com/maps?q=123+Main+Street,+Cityville,+State,+ZIP" target="_blank">
+                    123 Main Street,<br>
+                    Cityville, State, ZIP
+      </a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+        <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Digital vibe. All rights reserved.</p>
+        </div>
+     </div>
+  </footer>
+
+<button id="scrollTopBtn" onclick="scrollToTop()" class="soundButton" data-sound="clickSoundGroup1"><i class="fa-solid fa-jet-fighter-up"></i></button>
+
+
+<!-- sounds -->
+<audio id="clickSoundGroup1" src="sounds/mixkit-cool-interface-click-tone-2568.wav"></audio> 
+<audio id="clickSoundGroup2" src="sounds/mixkit-negative-tone-interface-tap-2569.wav"></audio>
+<audio id="clickSoundGroup3" src="sounds/mixkit-modern-technology-select-3124.wav"></audio>
+<audio id="clickSoundGroup4" src="sounds/mixkit-getting-ready-46.mp3"></audio>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const scrollProgress = document.getElementById('scrollProgress');
+    const missionIcon = document.getElementById('mission-icon');
+    const teamIcon = document.getElementById('team-icon');
+    const scrollLine = document.getElementById('scrollLine');
+
+    // Event listener for scroll events
+    window.addEventListener('scroll', function() {
+        // Calculate the progress of the scroll
+        const windowHeight = window.innerHeight;
+        const scrollHeight = document.body.clientHeight;
+        const scrollTop = window.scrollY;
+        const progress = (scrollTop / (scrollHeight - windowHeight)) * 300;
+
+        // Update the height of the progress bar
+        scrollProgress.style.height = progress + '%';
+
+        // Check if the mission icon is in view
+        const missionIconRect = missionIcon.getBoundingClientRect();
+        if (
+            missionIconRect.top >= 0 &&
+            missionIconRect.bottom <= windowHeight
+        ) {
+            // If the mission icon is in view, apply the shadow effect
+            missionIcon.style.boxShadow = '0 0 20px green';
+            console.log('Mission icon reached');
+        } else {
+            // If not, remove the shadow effect
+            missionIcon.style.boxShadow = 'none';
+        }
+
+        // Check if the team icon is in view
+        const teamIconRect = teamIcon.getBoundingClientRect();
+        if (
+            teamIconRect.top >= 0 &&
+            teamIconRect.bottom <= windowHeight
+        ) {
+            // If the team icon is in view, apply the shadow effect
+            teamIcon.style.boxShadow = '0 0 20px yellow';
+            console.log('Team icon reached');
+        } else {
+            // If not, remove the shadow effect
+            teamIcon.style.boxShadow = 'none';
+        }
+    });
+});
+
+
+
+</script>
+<!-- sounds -->
+
+<script src="js/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital vibe</title>
+    <link rel="icon" type="image/x-icon" href="images/logo/logo svg transparent.svg">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d36d507b4c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/master.css">
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+#contact {
+  width: 100%;
+  height: 100%;
+  padding-top: 100px;
+}
+
+.section-header {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font: 300 60px 'Oswald', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+.contact-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 20px;
+  position: relative;
+  max-width: 840px;
+}
+
+/* Left contact page */
+.form-horizontal {
+  /*float: left;*/
+  max-width: 400px;
+  font-family: 'Lato';
+  font-weight: 400;
+}
+
+.form-control, 
+textarea {
+  width: 400px;
+  background-color: #000;
+  color: #fff;
+  letter-spacing: 1px;
+  resize: none;
+  margin-bottom: 17px;
+  outline: none;
+    border: 1px solid var(--main-color);
+    padding: 10px;
+}
+.form-control:focus{
+    border: 2px solid var(--main-color);
+    box-shadow: 0 0 15px var(--main-color);
+}
+.send-button {
+  margin-top: 15px;
+  height: 34px;
+  width: 400px;
+  overflow: hidden;
+  background: var(--main-color);
+  transition: all .2s ease-in-out;
+}
+
+button:hover{
+  background: #19c8faab;
+  cursor: pointer;
+}
+
+.alt-send-button {
+  width: 400px;
+  height: 34px;
+  transition: all .2s ease-in-out;
+}
+
+.send-text {
+  display: block;
+  margin-top: 10px;
+  font: 700 12px 'Lato', sans-serif;
+  letter-spacing: 2px;
+}
+
+.alt-send-button:hover {
+  transform: translate3d(0px, -29px, 0px);
+}
+
+/* Begin Right Contact Page */
+.direct-contact-container {
+  max-width: 400px;
+}
+
+/* Location, Phone, Email Section */
+.contact-list {
+  list-style-type: none;
+  margin-left: -30px;
+  padding-right: 20px;
+}
+
+.list-item {
+  line-height: 4;
+  color: #aaa;
+}
+
+.contact-text {
+  font: 300 18px 'Lato', sans-serif;
+  letter-spacing: 1.9px;
+  color: #bbb;
+}
+
+.place {
+  margin-left: 62px;
+}
+
+.phone {
+  margin-left: 56px;
+}
+
+.gmail {
+  margin-left: 53px;
+}
+
+.contact-text a {
+  color: #bbb;
+  text-decoration: none;
+  transition-duration: 0.2s;
+}
+
+.contact-text a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-media-list {
+  position: relative;
+  font-size: 22px;
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.social-media-list a {
+  position: relative; 
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 10px 3px;
+  line-height: 60px;
+  border-radius: 50%;
+  color: #fff;
+  background-color: rgb(27,27,27);
+  cursor: pointer; 
+  pointer-events: all;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list a:hover {
+  background-color: #fff; 
+}
+
+.social-media-list a:hover i {
+  color: #000;
+}
+
+.social-media-list a i {
+  color: #fff;
+}
+
+.social-media-list a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow: 0 0 0 1px #fff;
+  transition: all .2s ease-in-out;
+}
+
+.social-media-list a:hover::after {
+  opacity: 1;  
+  transform: scale(1.12);
+  transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+}
+
+
+.call:hover .fa-phone{
+    animation: ring .5s;
+}
+@keyframes ring {
+    0%{
+        transform: rotate(10deg);
+    }10% {
+        transform: rotate(-10deg);
+    }20% {
+        transform: rotate(20deg);
+    }30% {
+        transform: rotate(-20deg);
+    }40% {
+        transform: rotate(30deg);
+    }50% {
+        transform: rotate(-30deg);
+    }60%{
+        transform: rotate(40deg);
+    }70% {
+        transform: rotate(-40deg);
+    }80% {
+        transform: rotate(25deg);
+    }90% {
+        transform: rotate(-25deg);
+    }95% {
+        transform: rotate(-10deg);
+    }100% {
+        transform: rotate(10deg);
+    }
+}
+
+.social-media-list li:hover a {
+  color: #000;
+}
+
+.copyright {
+  font: 200 14px 'Oswald', sans-serif;
+  color: #555;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+hr {
+  border-color: rgba(255,255,255,.6);
+}
+
+/* Begin Media Queries*/
+@media screen and (max-width: 850px) {
+  .contact-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  .direct-contact-container, .form-horizontal {
+    margin: 0 auto;
+  }  
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 300px;
+  }    
+  .social-media-list li {
+    height: 60px;
+    width: 60px;
+    line-height: 60px;
+  }
+  .social-media-list li:after {
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+  }
+}
+.fa-envelope-open {
+    display: none;
+}
+
+.list-item:hover .fa-envelope {
+    display: none;
+}
+
+.list-item:hover .fa-envelope-open {
+    display: inline-block;
+}
+
+
+.fa-map-location-dot {
+    display: none;
+}
+
+.list-item:hover .fa-location-dot {
+    display: none;
+}
+
+.list-item:hover .fa-map-location-dot {
+    display: inline-block;
+}
+
+
+
+@media screen and (max-width: 569px) {
+
+  .direct-contact-container, .form-wrapper {
+    float: none;
+    margin: 0 auto;
+  }  
+  .form-control, textarea {
+    
+    margin: 0 auto;
+  }
+ 
+  
+  .name, .email, textarea {
+    width: 280px;
+  } 
+  
+  .direct-contact-container {
+    margin-top: 60px;
+    max-width: 280px;
+  }  
+  .social-media-list {
+    left: 0;
+  }
+  .social-media-list li {
+    height: 55px;
+    width: 55px;
+    line-height: 55px;
+    font-size: 2rem;
+  }
+  .social-media-list li::after {
+    width: 55px;
+    height: 55px;
+    line-height: 55px;
+  }
+  
+}
+
+@media screen and (max-width: 410px) {
+  .send-button {
+    width: 99%;
+  }
+}
+</style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo soundButton fileLink" data-sound="clickSoundGroup3"><img src="images/logo/dv.png" style="width: 50px; border-radius: 50%;" alt=""></a>
+            <nav>
+                <i class="fas fa-bars " id="toggle-menu"></i>
+                <ul id="myList" class="">
+                    <li><a href="service.html" class="soundButton fileLink" data-sound="clickSoundGroup3">Services</a></li>
+                    <li><a href="portfolio.html" class="soundButton fileLink" data-sound="clickSoundGroup3">portfolio</a></li>
+                    <li><a href="pricing.html" >Pricing</a></li>
+                    <li><a href="" class="soundButton fileLink" data-sound="clickSoundGroup3">community <span class="soon" style="left: -15px; top: -15px;">soon</span></a></li>
+                    <li><a href="about.html" >About</a></li>
+                </ul>
+                    <button class="loginBtn">
+                        <div class="sign"><svg viewBox="0 0 512 512"><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg></div>
+                        <div class="text">Login</div>
+                    </button>
+                    <span class="soon ed" style="height: 19.2px; top: 6px; left: -5px; ">soon</span>
+            </nav>
+        </div>
+    </header>
+
+
+<section id="contact">
+  
+  <h1 class="section-header">Contact us</h1>
+  
+  <div class="contact-wrapper">
+  
+  <!-- Left contact page --> 
+    
+<form id="contact-form" class="form-horizontal" role="form">
+    <div class="form-group">
+        <div class="col-sm-12">
+            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <div class="col-sm-12">
+            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+        </div>
+    </div>
+
+    <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+    
+    <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
+        <div class="alt-send-button">
+            <i class="fa-solid fa-pen"></i><span class="send-text" style="padding-top: 8px;">SEND</span>
+        </div>
+    </button>
+</form>
+    
+  <!-- Left contact page --> 
+    
+      <div class="direct-contact-container">
+
+        <ul class="contact-list">
+          <li class="list-item" onmouseover="toggleIcon(this , '.fa-location-dot' , '.fa-map-location-dot')"><i class="fa fa-location-dot fa-2x" style="padding-right: 13px;"></i><i class="fa fa-map-location-dot fa-2x"></i><span class="contact-text place"><a class="footer-location-address" href="https://www.google.com/maps?q=123+Main+Street,+Cityville,+State,+ZIP" target="_blank">Cityville</a></li></span></li>
+          
+          <li class="list-item call"><i class="fa fa-phone fa-2x"></i><span class="contact-text phone"><a href="tel:+201080876548" title="Gimmy a call">+201080876548</a></span></li>
+          
+        <li class="list-item" onmouseover="toggleIcon(this , '.fa-envelope' , '.fa-envelope-open')"><i class="fa fa-envelope fa-2x"></i><i class="far fa-envelope-open fa-2x"></i><span class="contact-text gmail"><a href="mailto:digitalvibeoriginal@gmail.com" title="Send me an email">digitalvibeoriginal@gmail.com</a></span></li>          
+        </ul>
+
+        <hr style="margin: 20px 0;">
+        <ul class="social-media-list">
+          <li><a href="https://wa.me/1080876548" target="_blank" class="contact-icon">
+            <i class="fa-brands fa-whatsapp"></i></a>
+          </li>
+          <li><a href="https://t.me/share/contact/+201080876548" target="_blank" class="contact-icon"><i class="fa-brands fa-telegram"></i></a>
+          </li>
+          <li><a href="https://discord.com/channels/1233896857579687987/1233896857579687989" target="_blank" class="contact-icon">
+            <i class="fa-brands fa-discord"></i></a>
+          </li>
+          <li><a href="https://m.me/noopsaibot" target="_blank" class="contact-icon">
+            <i class="fa-brands fa-facebook-messenger"></i></a>
+          </li>       
+        </ul>
+        <hr style="margin: 20px 0;">
+
+        <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+
+      </div>
+    
+  </div>
+  
+</section>  
+  
+
+
+
+
+
+
+
+
+  <footer class="footer">
+     <div class="container">
+      <div class="row" style="gap: 0;">
+        <div class="footer-col">
+          <h4>company</h4>
+          <ul>
+            <li><a href="service.html">our services</a></li>
+            <li><a href="#">privacy policy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="FaQs.html">FAQ</a></li>
+            <li><a href="#">contact</a></li>
+            <li><a href="pricing.html">buy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>location</h4>
+          <ul>
+            <li><a class="footer-location-address" href="https://www.google.com/maps?q=123+Main+Street,+Cityville,+State,+ZIP" target="_blank">
+                    123 Main Street,<br>
+                    Cityville, State, ZIP
+      </a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>follow us</h4>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+      </div>
+        <div class="footer-bottom">
+      <p>&copy; <span id="current-year"></span> Digital vibe. All rights reserved.</p>
+        </div>
+     </div>
+  </footer>
+
+<button id="scrollTopBtn" onclick="scrollToTop()" class="soundButton" data-sound="clickSoundGroup1"><i class="fa-solid fa-jet-fighter-up"></i></button>
+
+
+<!-- sounds -->
+<audio id="clickSoundGroup1" src="sounds/mixkit-cool-interface-click-tone-2568.wav"></audio> 
+<audio id="clickSoundGroup2" src="sounds/mixkit-negative-tone-interface-tap-2569.wav"></audio>
+<audio id="clickSoundGroup3" src="sounds/mixkit-modern-technology-select-3124.wav"></audio>
+<audio id="clickSoundGroup4" src="sounds/mixkit-getting-ready-46.mp3"></audio>
+
+<!-- sounds -->
+<script>
+        function toggleIcon(element , from , to) {
+            element.querySelector(from).classList.toggle('hidden');
+            element.querySelector(to).classList.toggle('hidden');
+        };
+</script>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script>
+    (function(){
+        emailjs.init("dSLiP6y6fwrCsnlLC"); // Replace 'your_user_id' with your EmailJS user ID
+    })();
+</script>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting normally
+        
+        // Get the form data
+        const formData = new FormData(this);
+        
+        // Send the email using EmailJS
+        emailjs.sendForm('service_jt1tz75', 'template_g8tj50b', formData)
+            .then(function(response) {
+                console.log('Email sent successfully:', response);
+                alert('Your message has been sent!');
+            }, function(error) {
+                console.error('Email sending failed:', error);
+                alert('Oops! Something went wrong. Please try again later.');
+            });
+    });
+</script>
+
+<script src="js/main.js"></script>
+
+
+</body>
+</html>

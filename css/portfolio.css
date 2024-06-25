@@ -1,0 +1,52 @@
+:root{
+    --main-color: #F44336;
+    --transparent-color:rgb(244, 67, 54 , 2);
+    --text-color:#607D8B;
+    --section-padding: 100px;
+}
+body{
+    background-color: black;
+}
+::-moz-selection {
+    background: #c4d0b6;
+    color: #4CAF50;
+}
+::selection {
+    background: #c4d0b6;
+    color: #4CAF50;
+}
+.main-heading h2::before{
+    background-color: white;
+}
+.main-heading h2{
+    font-weight: normal;
+    font-size: 40px;
+    position: relative;
+    margin-bottom: 70px;
+    text-transform: uppercase;
+    color: var(--main-color);
+    margin-top: 200px;
+}
+.main-heading p{
+    color: var(--text-color);
+}
+.portfolio .shuffel li{
+    color: var(--text-color);
+}
+footer {
+    background-color: var(--main-color);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 24px;
+}

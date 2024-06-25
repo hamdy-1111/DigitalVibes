@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital vibe</title>
+    <link rel="icon" type="image/x-icon" href="images/logo/logo svg transparent.svg">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/master.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/portfolio.css">
+    <script src="https://kit.fontawesome.com/d36d507b4c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo soundButton fileLink" data-sound="clickSoundGroup3"><img src="images/logo/dv.png" style="width: 50px; border-radius: 50%;" alt=""></a>
+            <nav>
+                <i class="fas fa-bars " id="toggle-menu"></i>
+                <ul id="myList" class="">
+                    <li><a href="service.html" class="soundButton fileLink" data-sound="clickSoundGroup3">Services</a></li>
+                    <li><a href="pricing.html" >Pricing</a></li>
+                    <li><a href="" class="soundButton fileLink" data-sound="clickSoundGroup3">community <span class="soon" style="left: -15px; top: -15px;">soon</span></a></li>
+                    <li><a href="contact.html" >Contact</a></li>
+                    <li><a href="about.html" >About</a></li>
+                </ul>
+                    <button class="loginBtn">
+                        <div class="sign"><svg viewBox="0 0 512 512"><path d="M217.9 105.9L340.7 228.7c7.2 7.2 11.3 17.1 11.3 27.3s-4.1 20.1-11.3 27.3L217.9 406.1c-6.4 6.4-15 9.9-24 9.9c-18.7 0-33.9-15.2-33.9-33.9l0-62.1L32 320c-17.7 0-32-14.3-32-32l0-64c0-17.7 14.3-32 32-32l128 0 0-62.1c0-18.7 15.2-33.9 33.9-33.9c9 0 17.6 3.6 24 9.9zM352 416l64 0c17.7 0 32-14.3 32-32l0-256c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32l64 0c53 0 96 43 96 96l0 256c0 53-43 96-96 96l-64 0c-17.7 0-32-14.3-32-32s14.3-32 32-32z"></path></svg></div>
+                        <div class="text">Login</div>
+                    </button>
+                    <span class="soon ed" style="height: 19.2px; top: 6px; left: -5px; ">soon</span>
+            </nav>
+        </div>
+    </header>
+<button id="scrollTopBtn" onclick="scrollToTop()"><i class="fa-solid fa-jet-fighter-up"></i></button>
+
+
+<!-- START PORTFOLIO -->
+<div class="portfolio" id="portfolio">
+    <div class="container">
+        <div class="main-heading">
+            <h2>portfolio</h2>
+            <p>more portfolios </p>
+        </div>
+<ul class="shuffel">
+    <li data-category="all" class="soundButton active-3" data-sound="clickSoundGroup1">All</li>
+    <li data-category="app" class="soundButton" data-sound="clickSoundGroup1">App</li>
+    <li data-category="photo" class="soundButton" data-sound="clickSoundGroup1">Photo</li>
+    <li data-category="web" class="soundButton" data-sound="clickSoundGroup1">Web</li>
+    <li data-category="print" class="soundButton" data-sound="clickSoundGroup1">Print</li>
+</ul>
+    </div>
+    <div class="imgs-container">
+        <div class="box" data-category="photo">
+            <img src="images/shuffel-imgs/pho1.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="app">
+            <img src="images/shuffel-imgs/app1.png" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="app">
+            <img src="images/shuffel-imgs/app2.jpeg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="photo">
+            <img src="images/shuffel-imgs/pho2.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="web">
+            <img src="images/shuffel-imgs/web1.avif" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="web">
+            <img src="images/shuffel-imgs/web2.png" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="web">
+            <img src="images/shuffel-imgs/web3.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="print">
+            <img src="images/shuffel-imgs/back1.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="print">
+            <img src="images/shuffel-imgs/back2.webp" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+
+
+
+        <div class="box" data-category="photo">
+            <img src="images/shuffel-imgs/pho1.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="app">
+            <img src="images/shuffel-imgs/app1.png" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="app">
+            <img src="images/shuffel-imgs/app2.jpeg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="photo">
+            <img src="images/shuffel-imgs/pho2.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="web">
+            <img src="images/shuffel-imgs/web1.avif" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="web">
+            <img src="images/shuffel-imgs/web2.png" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="web">
+            <img src="images/shuffel-imgs/web3.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="print">
+            <img src="images/shuffel-imgs/back1.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="print">
+            <img src="images/shuffel-imgs/back2.webp" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="photo">
+            <img src="images/shuffel-imgs/pho1.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="photo">
+            <img src="images/shuffel-imgs/pho1.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="app">
+            <img src="images/shuffel-imgs/app1.png" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="app">
+            <img src="images/shuffel-imgs/app2.jpeg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="photo">
+            <img src="images/shuffel-imgs/pho2.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="web">
+            <img src="images/shuffel-imgs/web1.avif" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="web">
+            <img src="images/shuffel-imgs/web2.png" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="web">
+            <img src="images/shuffel-imgs/web3.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="print">
+            <img src="images/shuffel-imgs/back1.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="print">
+            <img src="images/shuffel-imgs/back2.webp" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="photo">
+            <img src="images/shuffel-imgs/pho1.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="app">
+            <img src="images/shuffel-imgs/app1.png" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="app">
+            <img src="images/shuffel-imgs/app2.jpeg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="photo">
+            <img src="images/shuffel-imgs/pho2.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="web">
+            <img src="images/shuffel-imgs/web1.avif" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="web">
+            <img src="images/shuffel-imgs/web2.png" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="web">
+            <img src="images/shuffel-imgs/web3.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="print">
+            <img src="images/shuffel-imgs/back1.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="print">
+            <img src="images/shuffel-imgs/back2.webp" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="photo">
+            <img src="images/shuffel-imgs/pho1.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="app">
+            <img src="images/shuffel-imgs/app1.png" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="app">
+            <img src="images/shuffel-imgs/app2.jpeg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="photo">
+            <img src="images/shuffel-imgs/pho2.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="web">
+            <img src="images/shuffel-imgs/web1.avif" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="web">
+            <img src="images/shuffel-imgs/web2.png" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="web">
+            <img src="images/shuffel-imgs/web3.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="print">
+            <img src="images/shuffel-imgs/back1.jpg" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+        <div class="box" data-category="print">
+            <img src="images/shuffel-imgs/back2.webp" alt="">
+            <div class="caption">
+                <h4>Awesome image</h4>
+                <p>photography</p>
+            </div>
+        </div>
+</div>
+
+<!-- END PORTFOLIO -->
+
+<footer>
+        <p>&copy; 2024 my Project. All rights reserved.</p>
+        <div class="social-icons">
+            <!-- Add your social media links and icons here -->
+            <a href="https://www.facebook.com/noopsaibot" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+</footer>
+
+<!-- sounds -->
+<audio id="clickSoundGroup1" src="sounds/mixkit-cool-interface-click-tone-2568.wav"></audio>
+<audio id="clickSoundGroup2" src="sounds/mixkit-negative-tone-interface-tap-2569.wav"></audio>
+<audio id="clickSoundGroup3" src="sounds/mixkit-modern-technology-select-3124.wav"></audio>
+<!-- sounds -->
+
+
+
+<!--START sound effects -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // Get all elements with the class 'soundButton' and set up event listeners
+    var buttons = document.querySelectorAll('.soundButton');
+    buttons.forEach(function (button) {
+        button.addEventListener('click', function (event) {
+            var soundId = this.getAttribute('data-sound');
+
+            // Check if the element has the 'fileLink' class
+            var isFileLink = button.classList.contains('fileLink');
+
+            // Play sound if soundId is defined
+            if (soundId) {
+                if (isFileLink) {
+                    event.preventDefault(); // Prevent the default behavior of the link for file links
+                    playSound(soundId);
+
+                    // Continue with the default behavior after a delay (e.g., 500 milliseconds)
+                    setTimeout(function () {
+                        window.location.href = button.getAttribute('href');
+                    }, 500);
+                } else {
+                    playSound(soundId); // Play sound without preventing the default behavior for regular links
+                }
+            }
+            // Your other functionality here
+        });
+    });
+    function playSound(soundId) {
+        var audio = document.getElementById(soundId);
+        if (audio) {
+            audio.play();
+        }
+    }
+});
+
+</script>
+<!--END sound effects -->
+
+
+
+<!--  start  portfolio-script   -->
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var shuffelList = document.querySelector('.shuffel');
+        var boxes = document.querySelectorAll('.box');
+
+        function showCategory(targetCategory) {
+            // Toggle active class on clicked li
+            shuffelList.querySelectorAll('li').forEach(function (li) {
+                li.classList.remove('active-3');
+            });
+
+            // Show/hide boxes based on the selected category
+            boxes.forEach(function (box) {
+                var boxCategory = box.getAttribute('data-category');
+
+                if (targetCategory === 'all' || targetCategory === boxCategory) {
+                    box.style.display = 'flex';
+                } else {
+                    box.style.display = 'none';
+                }
+            });
+
+            // Find the corresponding li and add the active class
+            var targetLi = shuffelList.querySelector('li[data-category="' + targetCategory + '"]');
+            if (targetLi) {
+                targetLi.classList.add('active-3');
+            }
+        }
+
+        shuffelList.addEventListener('click', function (event) {
+            var targetCategory = event.target.getAttribute('data-category');
+
+            // Trigger showCategory with the clicked category
+            showCategory(targetCategory);
+        });
+
+        // Trigger a click event on the "All" category to show its elements automatically
+        showCategory('all');
+    });
+</script>
+
+
+<!--  end  portfolio-script   -->
+
+<script src="js/main.js"></script>
+
+</body>
+</html>
