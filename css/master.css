@@ -356,6 +356,260 @@ header nav .form i {
 /* END COMPONENTS */
 
 
+
+/*START loader */
+
+.absolute {
+    position: absolute;
+}
+
+.inline-block {
+    display: inline-block;
+}
+#loader {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(18, 16, 16); /* Semi-transparent background */
+    position: fixed;
+    top: 0;
+    left: 0;
+    scrollbar-width: 0;
+    overflow: hidden; /* Disable scrolling */
+    display: none;
+}
+
+.loader-content{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.loader-content svg.l{
+    left:calc(50% - 30px ); position:absolute; top:-80px; z-index: -1; transform: translateX(-50%);
+}
+
+.loader-content svg {
+    height: 220px;
+    width: 170px;
+}
+
+@media (max-width: 710px) {
+    .loader-content svg.l{
+        left:calc(50% - 12px ); position:absolute; top:-25px; z-index: -1; transform: translateX(-50%);
+    }
+
+    .loader-content svg {
+        height: 100px;
+        width: 50px;
+    }
+}
+
+.w-2 {
+    width: 0.5em;
+}
+
+.dash {
+    -webkit-animation: dashArray 2s ease-in-out infinite, dashOffset 2s linear infinite;
+    animation: dashArray 2s ease-in-out infinite, dashOffset 2s linear infinite;
+}
+
+.dash2 {
+    -webkit-animation: dashArray2 2s ease-in-out infinite, dashOffset2 2s linear infinite;
+    animation: dashArray2 2s ease-in-out infinite, dashOffset2 2s linear infinite;
+}
+
+@-webkit-keyframes dashArray2 {
+    0% {
+        stroke-dasharray: 359 1 0 0;
+    }
+
+    50% {
+        stroke-dasharray: 0 359 1 0;
+    }
+
+    100% {
+        stroke-dasharray: 0 1 359 0;
+    }
+}
+
+@keyframes dashArray2 {
+    0% {
+        stroke-dasharray: 359 1 0 0;
+    }
+
+    50% {
+        stroke-dasharray: 0 359 1 0;
+    }
+
+    100% {
+        stroke-dasharray: 0 1 359 0;
+    }
+}
+
+@-webkit-keyframes dashOffset2 {
+    0% {
+        stroke-dashoffset: 5;
+    }
+
+    100% {
+        stroke-dashoffset: 385;
+    }
+}
+
+@keyframes dashOffset2 {
+    0% {
+        stroke-dashoffset: 5;
+    }
+
+    100% {
+        stroke-dashoffset: 385;
+    }
+}
+
+
+.spin {
+    -webkit-animation: spinDashArray 2s ease-in-out infinite, spin 8s ease-in-out infinite,
+    dashOffset 2s linear infinite;
+    animation: spinDashArray 2s ease-in-out infinite, spin 8s ease-in-out infinite,
+    dashOffset 2s linear infinite;
+    transform-origin: center;
+}
+
+@-webkit-keyframes dashArray {
+    0% {
+        stroke-dasharray: 0 1 359 0;
+    }
+
+    50% {
+        stroke-dasharray: 0 359 1 0;
+    }
+
+    100% {
+        stroke-dasharray: 359 1 0 0;
+    }
+}
+
+@keyframes dashArray {
+    0% {
+        stroke-dasharray: 0 1 359 0;
+    }
+
+    50% {
+        stroke-dasharray: 0 359 1 0;
+    }
+
+    100% {
+        stroke-dasharray: 359 1 0 0;
+    }
+}
+
+@-webkit-keyframes spinDashArray {
+    0% {
+        stroke-dasharray: 270 90;
+    }
+
+    50% {
+        stroke-dasharray: 0 360;
+    }
+
+    100% {
+        stroke-dasharray: 250 90;
+    }
+}
+
+@keyframes spinDashArray {
+    0% {
+        stroke-dasharray: 270 90;
+    }
+
+    50% {
+        stroke-dasharray: 0 360;
+    }
+
+    100% {
+        stroke-dasharray: 250 90;
+    }
+}
+
+@-webkit-keyframes dashOffset {
+    0% {
+        stroke-dashoffset: 385;
+    }
+
+    100% {
+        stroke-dashoffset: 5;
+    }
+}
+
+@keyframes dashOffset {
+    0% {
+        stroke-dashoffset: 385;
+    }
+
+    100% {
+        stroke-dashoffset: 5;
+    }
+}
+
+@-webkit-keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+
+    12.5%,
+    25% {
+        rotate: 270deg;
+    }
+
+    37.5%,
+    50% {
+        rotate: 540deg;
+    }
+
+    62.5%,
+    75% {
+        rotate: 810deg;
+    }
+
+    87.5%,
+    100% {
+        rotate: 1080deg;
+    }
+}
+
+@keyframes spin {
+    0% {
+        rotate: 0deg;
+    }
+
+    12.5%,
+    25% {
+        rotate: 270deg;
+    }
+
+    37.5%,
+    50% {
+        rotate: 540deg;
+    }
+
+    62.5%,
+    75% {
+        rotate: 810deg;
+    }
+
+    87.5%,
+    100% {
+        rotate: 1080deg;
+    }
+}
+/* END loader */
+
+
+
 /* START LANDING */
 .landing{
     min-height: 100vh;
@@ -412,13 +666,13 @@ header nav .form i {
 }
 .landing .text .content{
     max-width: 500px;
-    transform: translateX(-100%);
-}
-#land_cont.animate {
+/*     transform: translateX(-100%);
+ */}
+/* #land_cont.animate {
     opacity: 1;
     transform: translateX(0);
     transition: opacity 1.5s ease, transform 2s ease;
-}
+} */
 
 .landing .text .content h2{
     font-size: 32px;
@@ -498,14 +752,14 @@ border-color: var(--main-color);
     margin-left: 5px;
     justify-content: space-between;
     opacity: 0; /* Initially set opacity to 0 */
-    transform: translateX(100%); /* Initially translate to the right */
-    transition: opacity 1.5s ease, transform 2s ease;
+/*     transform: translateX(100%);
+ */    transition: opacity 1.5s ease, transform 2s ease;
     }
     
-.services .services-container.animate {
-    opacity: 1; /* When the .animate class is added, set opacity to 1 */
-    transform: translateX(0); /* When the .animate class is added, reset the translation */
-}
+/* .services .services-container.animate {
+    opacity: 1;
+    transform: translateX(0); 
+} */
 .services .srv-box{
     display: flex;
 }
@@ -565,14 +819,14 @@ border-color: var(--main-color);
     color: white;
     padding: 50px;
     background-color: var(--transparent-color);
-    transform: translateY(-100%);
-    opacity: .5;
+/*     transform: translateY(-100%);
+ */    opacity: .5;
 }
-#design_amni.animate{
+/* #design_amni.animate{
     transform: translateY(0);
     transition: opacity 1s ease, transform 2s ease;
     opacity: 1;
-}
+} */
 .design .text h2{
 margin-bottom: 40px;
 text-transform: uppercase;
