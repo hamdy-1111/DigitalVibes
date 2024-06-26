@@ -108,6 +108,9 @@ document.addEventListener('DOMContentLoaded', function () {
             bullet.classList.remove('active');
         });
 
+
+        landing.style.transition = 'background-image 1s ease';
+
         // Add the "active" class to the current bullet
         bullets[backgroundIndex].classList.add('active');
     }
