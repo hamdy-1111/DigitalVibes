@@ -188,6 +188,64 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
+function animateValue(element, start, end, duration) {
+  let startTimestamp = null;
+  const isPercent = element.classList.contains('percent');
+  const targetValue = isPercent ? parseFloat(end) : parseInt(end, 10);
+
+  const step = (timestamp) => {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+
+    if (isPercent) {
+      // Handle percent animation
+      const percentValue = Math.floor(progress * (targetValue - start) + start);
+      element.textContent = percentValue.toFixed(0) + '%'; // Ensure no decimal places
+    } else {
+      // Handle numeric animation
+      const numericValue = Math.floor(progress * (targetValue - start) + start);
+      element.textContent = numericValue;
+    }
+
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+
+  window.requestAnimationFrame(step);
+}
+
+function startCountersWhenVisible() {
+  const counters = document.querySelectorAll('.count');
+  const options = {
+    threshold: 0.7 // Trigger when at least 70% of the element is in the viewport
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        const target = entry.target.getAttribute('data-count');
+        const duration = 2000 + index * 342.6; // Adjust speed here
+
+        animateValue(entry.target, 0, target, duration);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, options);
+
+  const statisticsSection = document.querySelector('.statistics-section');
+  if (statisticsSection) {
+    counters.forEach((counter, index) => {
+      observer.observe(counter);
+    });
+  }
+}
+
+document.addEventListener('DOMContentLoaded', startCountersWhenVisible);
+
+
+
+
 
 
 
@@ -272,6 +330,41 @@ document.addEventListener("DOMContentLoaded", function() {
 		}); 
 	}); 
 }); 
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const clientSingles = document.querySelectorAll(".client-single");
+
+  clientSingles.forEach(function(clientSingle) {
+    clientSingle.addEventListener("click", function(event) {
+      event.preventDefault();
+
+      const isActive = this.classList.contains("active");
+      const parent = this.closest(".testi-wrap");
+
+      if (!isActive) {
+        const activeBlock = parent.querySelector(".client-single.active");
+        const currentPos = this.getAttribute("data-position");
+        const newPos = activeBlock.getAttribute("data-position");
+
+        activeBlock.classList.remove("active", newPos);
+        activeBlock.classList.add("inactive", currentPos);
+        activeBlock.setAttribute("data-position", currentPos);
+
+        this.classList.add("active");
+        this.classList.remove("inactive", currentPos);
+        this.classList.add(newPos);
+        this.setAttribute("data-position", newPos);
+      }
+    });
+  });
+});
 
 
 
