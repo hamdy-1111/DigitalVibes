@@ -6,7 +6,6 @@
     <title>Digital vibe</title>
     <link rel="icon" type="image/x-icon" href="images/logo/logo svg transparent.svg">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d36d507b4c.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/master.css">
@@ -154,6 +153,7 @@ button:hover{
   display: flex;
   flex-direction: row;
   justify-content: center;
+  gap: 10px;
 }
 
 .social-media-list a {
@@ -161,7 +161,7 @@ button:hover{
   display: inline-block;
   height: 60px;
   width: 60px;
-  margin: 10px 3px;
+  margin: 10px 0;
   line-height: 60px;
   border-radius: 50%;
   color: #fff;
@@ -274,6 +274,7 @@ hr {
     height: 60px;
     line-height: 60px;
   }
+
 }
 .fa-envelope-open {
     display: none;
@@ -343,7 +344,46 @@ hr {
   .send-button {
     width: 99%;
   }
+  #contact-form{
+    width:280px ;
+    overflow: hidden;
+  }
+    .form-control, 
+  textarea {
+    width: 280px;
+  }
 }
+
+/* Animation styles */
+
+.animate.active {
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/* Specific animations */
+.section-header.animate.active {
+    animation-name: fadeIn;
+}
+
+.form-horizontal.animate.active {
+    animation-name: slideInLeft;
+}
+
+.send-button.animate.active {
+    animation-name: zoomIn;
+}
+
+.contact-list .list-item.animate.active {
+    animation-name: shake;
+}
+
+.social-media-list.animate.active {
+    animation-name: slideInRight;
+}
+
+/* Keyframes (provided as hints, not included here) */
+
 </style>
 </head>
 <body>
@@ -368,72 +408,67 @@ hr {
         </div>
     </header>
 
+<section id="contact" class="animate">
+    <h1 class="section-header">Contact us</h1>
 
-<section id="contact">
-  
-  <h1 class="section-header">Contact us</h1>
-  
-  <div class="contact-wrapper">
-  
-  <!-- Left contact page --> 
-    
-<form id="contact-form" class="form-horizontal" role="form">
-    <div class="form-group">
-        <div class="col-sm-12">
-            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+    <div class="contact-wrapper">
+        <form id="contact-form" class="form-horizontal animate">
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
+                </div>
+            </div>
+
+            <textarea class="form-control animate" rows="10" placeholder="MESSAGE" name="message" required></textarea>
+
+            <button class="btn btn-primary send-button animate" id="submit" type="submit" value="SEND">
+                <div class="alt-send-button">
+                    <i class="fa-solid fa-pen"></i><span class="send-text" style="padding-top: 8px;">SEND</span>
+                </div>
+            </button>
+        </form>
+
+        <div class="direct-contact-container animate">
+            <ul class="contact-list">
+                <li class="list-item animate" onmouseover="toggleIcon(this , '.fa-location-dot' , '.fa-map-location-dot')">
+                    <span class="contact-text place"><a class="footer-location-address" href="https://www.google.com/maps?q=123+Main+Street,+Cityville,+State,+ZIP" target="_blank">       <i class="fa fa-location-dot fa-2x" style="padding-right: 13px;margin-left: -9px;"></i><i class="fa fa-map-location-dot fa-2x" style="margin-left: -9px;"></i>Cityville</a></span>
+                </li>
+                <li class="list-item call animate">
+                    <span class="contact-text phone"><a href="tel:+201080876548" title="Gimmy a call"><i class="fa fa-phone fa-2x" style="margin-left: -5px;"></i>+201080876548</a></span>
+                </li>
+                <li class="list-item animate" onmouseover="toggleIcon(this , '.fa-envelope' , '.fa-envelope-open')">
+                    <span class="contact-text gmail"><a href="mailto:digitalvibeoriginal@gmail.com" title="Send me an email"><i class="fa fa-envelope fa-2x"></i><i class="far fa-envelope-open fa-2x"></i>       digitalvibeoriginal@gmail.com</a></span>
+                </li>
+            </ul>
+
+            <hr style="margin: 20px 0;">
+            <ul class="social-media-list animate">
+                <li><a href="https://wa.me/1080876548" target="_blank" class="contact-icon">
+                    <i class="fa-brands fa-whatsapp"></i></a>
+                </li>
+                <li><a href="https://t.me/share/contact/+201080876548" target="_blank" class="contact-icon">
+                    <i class="fa-brands fa-telegram"></i></a>
+                </li>
+                <li><a href="https://discord.com/channels/1233896857579687987/1233896857579687989" target="_blank" class="contact-icon">
+                    <i class="fa-brands fa-discord"></i></a>
+                </li>
+                <li><a href="https://m.me/noopsaibot" target="_blank" class="contact-icon">
+                    <i class="fa-brands fa-facebook-messenger"></i></a>
+                </li>
+            </ul>
+            <hr style="margin: 20px 0;">
+
+            <div class="copyright animate">&copy; ALL OF THE RIGHTS RESERVED</div>
         </div>
     </div>
+</section>
 
-    <div class="form-group">
-        <div class="col-sm-12">
-            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
-        </div>
-    </div>
-
-    <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
-    
-    <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-        <div class="alt-send-button">
-            <i class="fa-solid fa-pen"></i><span class="send-text" style="padding-top: 8px;">SEND</span>
-        </div>
-    </button>
-</form>
-    
-  <!-- Left contact page --> 
-    
-      <div class="direct-contact-container">
-
-        <ul class="contact-list">
-          <li class="list-item" onmouseover="toggleIcon(this , '.fa-location-dot' , '.fa-map-location-dot')"><i class="fa fa-location-dot fa-2x" style="padding-right: 13px;"></i><i class="fa fa-map-location-dot fa-2x"></i><span class="contact-text place"><a class="footer-location-address" href="https://www.google.com/maps?q=123+Main+Street,+Cityville,+State,+ZIP" target="_blank">Cityville</a></li></span></li>
-          
-          <li class="list-item call"><i class="fa fa-phone fa-2x"></i><span class="contact-text phone"><a href="tel:+201080876548" title="Gimmy a call">+201080876548</a></span></li>
-          
-        <li class="list-item" onmouseover="toggleIcon(this , '.fa-envelope' , '.fa-envelope-open')"><i class="fa fa-envelope fa-2x"></i><i class="far fa-envelope-open fa-2x"></i><span class="contact-text gmail"><a href="mailto:digitalvibeoriginal@gmail.com" title="Send me an email">digitalvibeoriginal@gmail.com</a></span></li>          
-        </ul>
-
-        <hr style="margin: 20px 0;">
-        <ul class="social-media-list">
-          <li><a href="https://wa.me/1080876548" target="_blank" class="contact-icon">
-            <i class="fa-brands fa-whatsapp"></i></a>
-          </li>
-          <li><a href="https://t.me/share/contact/+201080876548" target="_blank" class="contact-icon"><i class="fa-brands fa-telegram"></i></a>
-          </li>
-          <li><a href="https://discord.com/channels/1233896857579687987/1233896857579687989" target="_blank" class="contact-icon">
-            <i class="fa-brands fa-discord"></i></a>
-          </li>
-          <li><a href="https://m.me/noopsaibot" target="_blank" class="contact-icon">
-            <i class="fa-brands fa-facebook-messenger"></i></a>
-          </li>       
-        </ul>
-        <hr style="margin: 20px 0;">
-
-        <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
-
-      </div>
-    
-  </div>
-  
-</section>  
   
 
 
@@ -457,16 +492,15 @@ hr {
           <h4>get help</h4>
           <ul>
             <li><a href="FaQs.html">FAQ</a></li>
-            <li><a href="#">contact</a></li>
             <li><a href="pricing.html">buy</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>location</h4>
           <ul>
-            <li><a class="footer-location-address" href="https://www.google.com/maps?q=123+Main+Street,+Cityville,+State,+ZIP" target="_blank">
-                    123 Main Street,<br>
-                    Cityville, State, ZIP
+            <li><a class="footer-location-address" href="https://maps.app.goo.gl/raEN6Lg3KiL8k5sa9" target="_blank">
+                    53 Main Street,<br>
+                    The 5th Settlement, Industrial Area, 11835
       </a></li>
           </ul>
         </div>

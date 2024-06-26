@@ -147,3 +147,37 @@ setVhProperty();
 // Update the value on resize
 window.addEventListener('resize', setVhProperty);
 /* #######################          ????????????   *   ????????????          ####################### */
+
+
+
+
+
+
+
+
+
+
+
+function observeElements(selector, animateClass, activeClass, inactiveClass) {
+    var elements = document.querySelectorAll(selector);
+
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                entry.target.classList.add(activeClass);
+                entry.target.classList.remove(inactiveClass);
+            } else {
+                entry.target.classList.remove(activeClass);
+                entry.target.classList.add(inactiveClass);
+            }
+        });
+    });
+
+    elements.forEach(function (element) {
+        observer.observe(element);
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    observeElements('.animate', 'animate', 'active', 'inactive');
+});

@@ -37,40 +37,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-function observeAndAnimate(element, animateClass, staticClass) {
-    var observer = new IntersectionObserver(function (entries) {
-        if (entries[0].isIntersecting) {
-            element.classList.add(animateClass);
-            element.classList.remove(staticClass);
-        } else {
-            element.classList.remove(animateClass);
-            element.classList.add(staticClass);
-        }
-    });
-
-    // Initial check in case element is already in view on page load
-    observer.observe(element);
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    var designAmni = document.getElementById('design_amni');
-    var landCont = document.getElementById('land_cont');
-    var servicesSection = document.querySelector('.services-container');
-    var titlefade = document.querySelector('.titlefade');
-    var titlefade2 = document.querySelector('.titlefade2');
-    var titlefade3 = document.querySelector('.titlefade3');
-    var aboutText = document.querySelector('.about-content');
-    var aboutText2 = document.querySelector('.about-content2');
-
-    observeAndAnimate(designAmni, 'animate', 'static');
-    observeAndAnimate(landCont, 'animate', 'static');
-    observeAndAnimate(servicesSection, 'animate', 'static');
-    observeAndAnimate(titlefade, 'animate', 'static');
-    observeAndAnimate(titlefade2, 'animate', 'static');
-    observeAndAnimate(titlefade3, 'animate', 'static');
-    observeAndAnimate(aboutText, 'animate', 'static');
-    observeAndAnimate(aboutText2, 'animate', 'static');
-});
 
 
 
@@ -220,52 +186,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
 
 
-const generateGlowButtons = () => {
-    document.querySelectorAll(".glow-button").forEach((button) => {
-        let gradientElem = button.querySelector('.gradient');
-        
-        if(!gradientElem) {
-            gradientElem = document.createElement("div");
-            gradientElem.classList.add("gradient");
-            button.appendChild(gradientElem);
-        }
-
-        button.addEventListener("pointermove", (e) => {
-            const rect = button.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            gsap.to(button, {
-                "--pointer-x": `${x}px`,
-                "--pointer-y": `${y}px`,
-                duration: 0.6,
-            });
-
-            gsap.to(button, {
-                "--button-glow": chroma
-                .mix(
-                    getComputedStyle(button)
-                    .getPropertyValue("--button-glow-start")
-                    .trim(),
-                    getComputedStyle(button).getPropertyValue("--button-glow-end").trim(),
-                    x / rect.width
-                )
-                .hex(),
-                duration: 0.2,
-            });
-        });
-    });
-}
-
-const initGlowButtons = () => {
-    generateGlowButtons();
-}
-
-// Set variables on loaded
-document.addEventListener('DOMContentLoaded', initGlowButtons);
-
-// Set variables on resize
-window.addEventListener('resize', initGlowButtons);
 
 
 

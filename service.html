@@ -6,11 +6,16 @@
     <title>Digital vibe</title>
     <link rel="icon" type="image/x-icon" href="images/logo/logo svg transparent.svg">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/master.css">
     <link rel="stylesheet" href="css/service.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d36d507b4c.js" crossorigin="anonymous"></script>
+    <style>
+        .services .services-container.animate.active {
+            -webkit-animation: rubberBand 0.8s ease forwards;
+                    animation: slideInRight 0.8s ease forwards;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -34,46 +39,47 @@
 </div>
 </header>
 <button id="scrollTopBtn" onclick="scrollToTop()"><i class="fa-solid fa-jet-fighter-up"></i></button>
-<!-- START SERVICES -->
-    <div class="services" id="servicesSection">
-        <div class="container">
-            <div class="main-heading">
-                <h2>Services</h2>
-                <p>At Digital Vibes, we believe that quality digital solutions shouldn't break the bank. That's why we offer our services at very competitive prices, making high-quality web development, application development, and graphics design accessible to businesses of all sizes. With Digital Vibes, you can expect top-notch craftsmanship without compromising on affordability.</p>
+    <!-- START SERVICES -->
+<div class="services" id="servicesSection">
+    <div class="container">
+        <div class="main-heading">
+            <h2>Services</h2>
+            <p class="animate">At Digital Vibes, we believe that quality digital solutions shouldn't break the bank. That's why we offer our services at very competitive prices, making high-quality web development, application development, and graphics design accessible to businesses of all sizes. With Digital Vibes, you can expect top-notch craftsmanship without compromising on affordability.</p>
+        </div>
+    </div>
+    <div class="services-container animate">
+        <div class="srv-box">
+            <i class="fa-solid fa-window-maximize"></i>
+            <div class="text">
+                <h3>Web Development:</h3>
+                <p>From sleek and modern websites to powerful e-commerce platforms, we build websites that not only look stunning but also deliver exceptional user experiences.</p>
             </div>
         </div>
-        <div class="services-container">
-            <div class="srv-box">
-                <i class="fa-solid fa-window-maximize"></i>
-                <div class="text">
-                    <h3>Web Development:</h3>
-                    <p>rom sleek and modern websites to powerful e-commerce platforms, we build websites that not only look stunning but also deliver exceptional user experiences.</p>
-                </div>
+        <div class="srv-box">
+            <i class="fa-solid fa-mobile-button"></i>
+            <div class="text">
+                <h3>Mobile Applications:</h3>
+                <p>Reach your audience wherever they are with our custom mobile applications. Whether it's iOS, Android, or cross-platform development, we develop mobile apps that are intuitive, engaging, and built to perform.</p>
             </div>
-            <div class="srv-box">
-                <i class="fa-solid fa-mobile-button"></i>
-                <div class="text">
-                    <h3>Mobile Applications:</h3>
-                    <p> Reach your audience wherever they are with our custom mobile applications. Whether it's iOS, Android, or cross-platform development, we develop mobile apps that are intuitive, engaging, and built to perform.</p>
-                </div>
+        </div>
+        <div class="srv-box">
+            <i class="fa-solid fa-wand-magic-sparkles"></i>
+            <div class="text">
+                <h3>Graphics Design:</h3>
+                <p>Make a statement with captivating visuals that speak volumes about your brand. Our team of talented graphic designers will work closely with you to create stunning visuals that leave a lasting impression.</p>
             </div>
-            <div class="srv-box">
-                <i class="fa-solid fa-wand-magic-sparkles"></i>
-                <div class="text">
-                    <h3>Graphics Design: </h3>
-                    <p> Make a statement with captivating visuals that speak volumes about your brand. Our team of talented graphic designers will work closely with you to create stunning visuals that leave a lasting impression.</p>
-                </div>
-            </div>
-            <div class="srv-box">
-                <i class="fa-solid fa-icons"></i>
-                <div class="text">
-                    <h3>montaging</h3>
-                    <p>Transform your footage into captivating videos with our professional montaging services. Expert editing, dynamic transitions, and personalized storytelling to bring your vision to life.</p>
-                </div>
+        </div>
+        <div class="srv-box">
+            <i class="fa-solid fa-icons"></i>
+            <div class="text">
+                <h3>Montaging:</h3>
+                <p>Transform your footage into captivating videos with our professional montaging services. Expert editing, dynamic transitions, and personalized storytelling to bring your vision to life.</p>
             </div>
         </div>
     </div>
-<!-- END SERVICES -->
+</div>
+
+    <!-- END SERVICES -->
 
 
 

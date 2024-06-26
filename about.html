@@ -48,171 +48,6 @@ body {
 }
 /* Add your global CSS styles here */
 
-/* Example style for the element when it comes into view */
-/* Animation 1 */
-.animate-slide-up {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.animate-slide-up.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Animation 2 */
-.animate-scale {
-    opacity: 0;
-    transform: scale(0.8);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.animate-scale.visible {
-    opacity: 1;
-    transform: scale(1);
-}
-
-/* Animation 3 */
-.animate-fade-in {
-    opacity: 0;
-    transition: opacity 1.3s ;
-}
-
-.animate-fade-in.visible {
-    opacity: 1;
-}
-
-
-/* Animation 5 */
-.animate-bounce {
-    opacity: 0;
-    transform: translateY(0);
-    animation: bounce 0.5s ease;
-}
-
-.animate-bounce.visible {
-    opacity: 1;
-}
-
-@keyframes bounce {
-    0% { transform: translateY(20px); }
-    50% { transform: translateY(-10px); }
-    100% { transform: translateY(0); }
-}
-
-/* Animation 6 */
-.animate-flip {
-    opacity: 0;
-    transform: rotateX(90deg);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.animate-flip.visible {
-    opacity: 1;
-    transform: rotateX(0);
-}
-
-/* Animation Keyframes */
-@keyframes slide-in-left {
-    0% {
-        transform: translateX(-100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slide-in-right {
-    0% {
-        transform: translateX(100%);
-        opacity: 0;
-    }
-    100% {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-30px);
-    }
-    60% {
-        transform: translateY(-15px);
-    }
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
-
-@keyframes color-change {
-    0% {
-        color: #4b134f;
-    }
-    50% {
-        color: #c94b4b;
-    }
-    100% {
-        color: #4b134f;
-    }
-}
-
-/* Animated Classes */
-.animate-slide-in-left {
-    animation: slide-in-left 1s ease-out forwards;
-}
-
-.animate-slide-in-left.visible {
-    transform: translateX(-100%);
-    opacity: 0;
-}
-
-.animate-slide-in-right {
-    animation: slide-in-right 1s ease-out forwards;
-}
-
-.animate-slide-in-right.visible {
-    transform: translateX(100%);
-    opacity: 0;
-}
-
-.animate-bounce {
-    animation: bounce 1s ease-out forwards;
-}
-
-.animate-bounce.visible {
-    transform: translateY(0);
-}
-
-.animate-rotate {
-    animation: rotate 2s linear infinite;
-}
-
-.animate-rotate.visible {
-    transform: rotate(0deg);
-}
-
-.animate-color-change {
-    animation: color-change 2s ease-in-out infinite;
-}
-
-.animate-color-change.visible {
-    color: #4b134f;
-}
-
-
 
 
 
@@ -420,6 +255,88 @@ display: none;
 
         }
   }
+
+
+/* Animation styles */
+
+/* Animation styles for About section */
+#about .main-heading.animate h2 {
+    opacity: 0;
+}
+
+#about .main-heading.animate.active h2 {
+    animation: fadeIn 1s forwards;
+}
+
+#about .main-heading.animate.inactive h2 {
+    animation: fadeOut 1s forwards;
+}
+
+#about .main-heading.animate p {
+    opacity: 0;
+    transform: translateY(50%);
+}
+
+#about .main-heading.animate.active p {
+    animation: slideInLeft 1s forwards;
+}
+
+#about .main-heading.animate.inactive p {
+    animation: slideOutDown 1s forwards;
+}
+
+
+
+.main-heading.animate h2 {
+    opacity: 0;
+}
+
+.main-heading.animate.active h2 {
+    animation: fadeIn 1s forwards;
+}
+
+.main-heading.animate.inactive h2 {
+    animation: fadeOut 1s forwards;
+}
+
+.main-heading.animate p {
+    opacity: 0;
+    transform: translateY(50%);
+}
+
+.main-heading.animate.active p {
+    animation: slideInLeft 1s forwards;
+}
+
+.main-heading.animate.inactive p {
+    animation: slideOutDown 1s forwards;
+}
+
+.team-card.animate {
+    opacity: 0;
+    transform: scale(0);
+}
+
+.team-card.animate.active {
+    animation: zoomIn 1s forwards;
+}
+
+.team-card.animate.inactive {
+    animation: zoomOut 1s forwards;
+}
+
+#btn.animate {
+    opacity: 0;
+    transform: scale(0);
+}
+
+#btn.animate.active {
+    animation: zoomIn 1s forwards;
+}
+
+#btn.animate.inactive {
+    animation: zoomOut 1s forwards;
+}
     </style>
 </head>
 <body>
@@ -448,131 +365,104 @@ display: none;
         <div class="icon" style="top: 300px; box-shadow: 0 0 15px red; border: 1px solid red;"><i class="fa-solid fa-question" style="color: red;"><a href=""></a></i></div>
         <div class="icon" id="mission-icon" style="top: 1250px;  border: 1px solid green;"><i class="fas fa-bullseye" style="color: green;"></i></div>
         <div class="icon" id="team-icon" style="top: 1890px; border: 1px solid ;"><i class="fas fa-users" style="color: yellow;"></i></div>
-yellow
-<!--     <section id="about">
-        <div class="container">
-            <div class="about-content">
-                <h1 class="main-heading">About Digital Vibe</h1>
-                <p>Welcome to Digital Vibe, where innovation meets excellence. Founded in 2005, Digital Vibe has emerged as a leading provider of digital solutions, catering to clients worldwide. Our journey began with a vision to transform businesses through cutting-edge technology and creative brilliance.</p>
-                <p>At Digital Vibe, we believe in the power of digital transformation to drive growth, enhance efficiency, and unlock new opportunities. With a diverse team of experts and a passion for innovation, we deliver custom solutions tailored to the unique needs of each client.</p>
-                <p>Our commitment to quality, integrity, and customer satisfaction sets us apart in the competitive landscape. We take pride in our ability to exceed expectations, delivering results that resonate with our clients and their audiences.</p>
-                <h2>Our Mission</h2>
-                <p>Our mission at Digital Vibe is to empower businesses with transformative digital solutions that drive success in the digital age. We strive to harness the latest technologies and creative strategies to deliver measurable results and create lasting value for our clients.</p>
-                <h2>Our Team</h2>
-                <p>Meet the passionate individuals behind Digital Vibe's success. Our team brings together a diverse range of talents, including developers, designers, marketers, and strategists, united by a shared commitment to excellence.</p>
-                <h2>Get in Touch</h2>
-                <p>Ready to take your digital presence to the next level? Contact us today to discuss your project requirements and discover how Digital Vibe can help you achieve your business objectives.</p>
-                <a href="contact.html" class="btn btn-primary">Contact Us</a>
-            </div>
-        </div>
-    </section> -->
-    <div class="services" id="about">
-        <div class="container">
-            <div class="main-heading ">
-                <h2 class="animate-slide-up animate-bounce">About Digital Vibe</h2>
-                <p class="animate-slide-in-right animate-scale">Welcome to Digital Vibe, where innovation meets excellence. Founded in 2005, Digital Vibe has emerged as a leading provider of digital solutions, catering to clients worldwide. Our journey began with a vision to transform businesses through cutting-edge technology and creative brilliance.</p>
-                <p class="animate-slide-in-left animate-scale">At Digital Vibe, we believe in the power of digital transformation to drive growth, enhance efficiency, and unlock new opportunities. With a diverse team of experts and a passion for innovation, we deliver custom solutions tailored to the unique needs of each client.</p>
-                <p class="animate-slide-in-right animate-scale">Our commitment to quality, integrity, and customer satisfaction sets us apart in the competitive landscape. We take pride in our ability to exceed expectations, delivering results that resonate with our clients and their audiences.</p>            </div>
+<div class="services" id="about">
+    <div class="container">
+        <div class="main-heading animate">
+            <h2>About Digital Vibe</h2>
+            <p>Welcome to Digital Vibe, where innovation meets excellence. Founded in 2019, Digital Vibe has emerged as a leading provider of digital solutions, catering to clients worldwide. Our journey began with a vision to transform businesses through cutting-edge technology and creative brilliance.</p>
+            <p>At Digital Vibe, we believe in the power of digital transformation to drive growth, enhance efficiency, and unlock new opportunities. With a diverse team of experts and a passion for innovation, we deliver custom solutions tailored to the unique needs of each client.</p>
+            <p>Our commitment to quality, integrity, and customer satisfaction sets us apart in the competitive landscape. We take pride in our ability to exceed expectations, delivering results that resonate with our clients and their audiences.</p>
         </div>
     </div>
+</div>
+
 <div class="services" id="mission">
     <div class="container">
-        <div class="main-heading">
-                <h2 class="animate-slide-in-left">Our Mission</h2>
-                <p class="animate-scale">Our mission at Digital Vibe is to empower businesses with transformative digital solutions that drive success in the digital age. We strive to harness the latest technologies and creative strategies to deliver measurable results and create lasting value for our clients.</p>
+        <div class="main-heading animate">
+            <h2>Our Mission</h2>
+            <p>Our mission at Digital Vibe is to empower businesses with transformative digital solutions that drive success in the digital age. We strive to harness the latest technologies and creative strategies to deliver measurable results and create lasting value for our clients.</p>
         </div>
     </div>
 </div>
-<div class="services animate-slide-in-left" id="team">
+
+<div class="services" id="team">
     <div class="container">
-            <div class="main-heading">
-                <h2>Our Team</h2>
-                <p class="animate-scale">Meet the passionate individuals behind Digital Vibe's success. Our team brings together a diverse range of talents, including developers, designers, marketers, and strategists, united by a shared commitment to excellence.</p>
+        <div class="main-heading animate">
+            <h2>Our Team</h2>
+            <p>Meet the passionate individuals behind Digital Vibe's success. Our team brings together a diverse range of talents, including developers, designers, marketers, and strategists, united by a shared commitment to excellence.</p>
+        </div>
+
+        <div class="container team-container animate">
+            <div class="team-card animate">
+                <div class="img-wrapper">
+                    <img class="team-img" src="images/team/hamdy.jpg" style="height: 232px;">
+                </div>
+                <p class="name">Hamdy El-menshawi</p>
+                <p class="position">Front-end Developer</p>
+                <div class="social-media-links">
+                    <a target="_blank" href="https://www.facebook.com/noopsaibot"><i class="fab fa-facebook-f"></i></a>
+                    <a target="_blank" href="https://twitter.com/HamdyELmenshawi"><i class="fab fa-twitter"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/hamdyelmenshawei"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/noopsaibot"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+                <div class="social-media-links" style="margin-top: -10px;">
+                    <a class="footer-call-to-action-link" href="tel:+201080876548" target="_self"><i class="fa-solid fa-phone"></i></a>
+                    <a href="https://discordapp.com/users/noopsaibot909" target="_blank" class="contact-icon"><i class="fa-brands fa-discord"></i></a>
+                    <a href="https://wa.me/1080876548" target="_blank" class="contact-icon"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://m.me/noopsaibot" target="_blank" class="contact-icon"><i class="fa-brands fa-facebook-messenger"></i></a>
+                </div>
+            </div>
+
+            <div class="team-card animate">
+                <div class="img-wrapper">
+                    <img class="team-img" src="images/team/ammar.jpg" style="height: 232px;">
+                </div>
+                <p class="name">Ammar Ramadan</p>
+                <p class="position">Back-end Developer</p>
+                <div class="social-media-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="team-card animate">
+                <div class="img-wrapper">
+                    <img class="team-img" src="images/team/maxwell.jpg" style="height: 232px;">
+                </div>
+                <p class="name">Maxwell Doe</p>
+                <p class="position">Instructor</p>
+                <div class="social-media-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <div class="team-card animate">
+                <div class="img-wrapper">
+                    <img class="team-img" src="images/team/maxwell.jpg" style="height: 232px;">
+                </div>
+                <p class="name">Maxwell Doe</p>
+                <p class="position">Instructor</p>
+                <div class="social-media-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+
+            <!-- More team cards here -->
+
         </div>
     </div>
-<div class="container animate-slide-in-left animate-scale" >
-  <div class="inner-container">
-    <div class="container team-container">
-      <div class="team-card">
-        <div class="img-wrapper">
-          <img class="team-img" src="images/team/hamdy.jpg"  style="height: 232px;">
-        </div>
-        <p class="name">
-          Hamdy El-menshawi
-        </p>
-        <p class="position">
-          front-end developer
-        </p>
-        <div class="social-media-links">
-            <a target="_blank" href="https://www.facebook.com/noopsaibot"><i class="fab fa-facebook-f"></i></a>
-            <a target="_blank" href="https://twitter.com/HamdyELmenshawi?fbclid=IwZXh0bgNhZW0CMTAAAR1NkDgsnMbGivXkzslL-lJVWumh7mp4Luu3kamAQaiASdyfqxMXcPI_YdI_aem_Af77VsfVIQaaa7paWYW1n-ZJi-tLLF0XyjeJl_aNOjkPMntk51uAsyGx2b3hpA2Yh6bl_rErVPUtUjDWGJVphCqq"><i class="fab fa-twitter"></i></a>
-            <a target="_blank" href="https://www.instagram.com/hamdyelmenshawei?fbclid=IwZXh0bgNhZW0CMTAAAR22Kiui4Xj-_lIbYsIHJnQSpSthbkNcMIumew5wWwizLNr0L9n-Nqylhrg_aem_Af430lv8iu7KcNAvUkqjKZJ1UDr-yhR-zhvogzjDc-fXYqRZYqj2_NafE1UZE7BK88Gtu50i1-XEfPZ91KsKCpO5"><i class="fab fa-instagram"></i></a>
-            <a target="_blank" href="www.linkedin.com/in/noopsaibot"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-        <div class="social-media-links" style="margin-top: -10px;">
-            <a class="footer-call-to-action-link" href="tel:+201080876548" target="_self"><i class="fa-solid fa-phone"></i></a>
-            <a href="https://discordapp.com/users/noopsaibot909" target="_blank" class="contact-icon"><i class="fa-brands fa-discord"></i></a>
-            <a href="https://wa.me/1080876548" target="_blank" class="contact-icon"><i class="fa-brands fa-whatsapp"></i></a>
-            <a href="https://m.me/noopsaibot" target="_blank" class="contact-icon"><i class="fa-brands fa-facebook-messenger"></i></a>
-        </div>
-        </div>
-            <div class="team-card">
-        <div class="img-wrapper">
-          <img class="team-img" src="https://static1.pocketlintimages.com/wordpress/wp-content/uploads/148310-tv-feature-what-order-should-you-watch-the-fast-and-furious-films-in-image1-rzgajwfo2x.jpg" style="height: 232px;">
-        </div>
-        <p class="name">
-          ammar ramadan
-        </p>
-        <p class="position">
-          back-end developer 
-        </p>
-        <div class="social-media-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-            <div class="team-card">
-        <div class="img-wrapper">
-          <img class="team-img" src="https://wallpapercave.com/wp/wp1867294.jpg" style="height: 232px;">
-        </div>
-        <p class="name">
-          Maxwell Doe
-        </p>
-        <p class="position">
-          Instructor
-        </p>
-        <div class="social-media-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-            <div class="team-card">
-        <div class="img-wrapper">
-          <img class="team-img" src="https://www.pixel4k.com/wp-content/uploads/2020/08/john-wick_1596931158.jpg" style="height: 232px;">
-        </div>
-        <p class="name">
-          Maxwell Doe
-        </p>
-        <p class="position">
-          Instructor
-        </p>
-        <div class="social-media-links">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-      <!-- More team cards here -->
-    </div>
-  </div>
 </div>
-</div>
-<a id="btn" href="contact.html">contact us</a>
+
+<a id="btn" href="contact.html" class="animate">Contact Us</a>
+
 
 
     
