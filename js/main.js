@@ -181,3 +181,36 @@ function observeElements(selector, animateClass, activeClass, inactiveClass) {
 document.addEventListener('DOMContentLoaded', function () {
     observeElements('.animate', 'animate', 'active', 'inactive');
 });
+
+/*START loader */
+function toggleScrolling(enableScrolling) {
+    if (enableScrolling) {
+        document.body.style.overflow = 'auto'; // Enable scrolling
+    } else {
+        document.body.style.overflow = 'hidden'; // Disable scrolling
+    }
+}
+
+function showLoader() {
+    const loader = document.getElementById('loader');
+    loader.style.display = 'flex';
+    toggleScrolling(false);
+}
+
+function hideLoader() {
+    const loader = document.getElementById('loader');
+    loader.style.display = 'none';
+    toggleScrolling(true);
+}
+
+// Example usage: Simulating a load
+document.addEventListener('DOMContentLoaded', () => {
+    showLoader();
+
+    // Simulate loading process with a timeout
+    setTimeout(() => {
+        hideLoader();
+    }, 3000); // Hide loader after 3 seconds
+});
+
+/*END loader */
