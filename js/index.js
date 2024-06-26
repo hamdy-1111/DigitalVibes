@@ -250,6 +250,55 @@ document.addEventListener('DOMContentLoaded', startCountersWhenVisible);
 
 
 
+
+// Function to update the countdown timer
+function updateCountdown(endDate) {
+    const now = new Date().getTime(); // Current timestamp
+    const distance = endDate - now; // Time difference between now and the target date
+
+    // Calculate time components: days, hours, minutes, seconds
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    // Output the result in the specified format
+    document.getElementById('days').textContent = days + ' days';
+    document.getElementById('hours').textContent = hours + ' hours';
+    document.getElementById('minutes').textContent = minutes + ' minutes';
+    document.getElementById('seconds').textContent = seconds + ' seconds';
+
+    // If the countdown is over, display "this moment forever" or take appropriate action
+    if (distance < 0) {
+        clearInterval(timerInterval); // Stop the countdown timer
+        document.getElementById('timeRemain').textContent = 'this moment forever';
+    }
+}
+
+// Function to start the countdown timer
+function startCountdown() {
+    // Define the end date as July 7, 2024
+    const endDate = new Date('2024-07-07T00:00:00Z').getTime(); // Convert to milliseconds since Unix epoch
+
+    // Initial call to update the countdown immediately
+    updateCountdown(endDate);
+
+    // Update the countdown every second (1000 milliseconds)
+    const timerInterval = setInterval(function() {
+        updateCountdown(endDate);
+    }, 1000);
+}
+
+// Start the countdown when the DOM content is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    startCountdown();
+});
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function() { 
 	const carousel = document.querySelector(".carousel"); 
 	const arrowBtns = document.querySelectorAll(".wrapper i"); 
