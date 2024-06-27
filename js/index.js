@@ -91,10 +91,10 @@ document.addEventListener('DOMContentLoaded', function () {
     var backgroundIndex = 0; // Index of the current background image
 
     var backgrounds = [
-        'url(../images/landing/img1.png)',
-        'url(../images/landing/img2.png)',
-        'url(../images/landing/img6.png)',
-        'url(../images/landing/img4.png)',
+        'url(landing/img1.png)',
+        'url(landing/img2.png)',
+        'url(landing/img6.png)',
+        'url(landing/img4.png)',
         // Add more background images as needed
     ];
 

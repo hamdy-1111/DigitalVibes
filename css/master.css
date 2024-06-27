@@ -622,10 +622,7 @@ button{
 .landing{
     min-height: 100vh;
     background-color: #607d8b;
-    background-image: url(../images/6anding/img2.png);
-    background-image: url(../images/landing/img6.png);
-    background-image: url(../images/landing/img4.png);
-    background-image: url(../images/landing/img1.png);
+    background-image: url(../landing/img1.png);
     background-size: cover;
     position: relative;
     border-radius: 0 0 30px 30px;
