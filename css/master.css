@@ -361,6 +361,13 @@ button{
         -ms-user-select: none;
             user-select: none;
 }
+
+a{
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+}
 /* END COMPONENTS */
 
 
@@ -3333,8 +3340,8 @@ ul{
 }
 
 .testi-wrap.animate.active {
-    -webkit-animation: slideInLeft 2s forwards;
-            animation: slideInLeft 2s forwards;
+    -webkit-animation: slideInLeft .5s forwards;
+            animation: slideInLeft .5s forwards;
 }
 
 .app-showcase.animate {

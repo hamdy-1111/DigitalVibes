@@ -203,14 +203,14 @@ function hideLoader() {
     toggleScrolling(true);
 }
 
-// Example usage: Simulating a load
+// Show loader when DOM content is loaded
 document.addEventListener('DOMContentLoaded', () => {
     showLoader();
-
-    // Simulate loading process with a timeout
-    setTimeout(() => {
-        hideLoader();
-    }, 3000); // Hide loader after 3 seconds
 });
+
+// Hide loader when all resources are loaded
+window.onload = () => {
+    hideLoader();
+};
 
 /*END loader */
