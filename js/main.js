@@ -85,55 +85,6 @@ function showSwal(type, message, title) {
 
 
 
-// animation script
-// Function to check if an element is in the viewport
-function isElementInViewport(el) {
-    var rect = el.getBoundingClientRect();
-    return (
-        rect.top >= 0 &&
-        rect.left >= 0 &&
-        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
-    );
-}
-
-// Function to toggle CSS class when element is in viewport
-function toggleAnimationOnScroll(startClass, endClass) {
-    var elements = document.querySelectorAll('.' + startClass);
-    elements.forEach(function(element) {
-        if (isElementInViewport(element)) {
-            element.classList.add(endClass);
-        } else {
-            element.classList.remove(endClass);
-        }
-    });
-}
-
-// Event listener for scroll events
-window.addEventListener('scroll', function() {
-    toggleAnimationOnScroll('animate-slide-up', 'visible');
-    toggleAnimationOnScroll('animate-scale', 'visible');
-    toggleAnimationOnScroll('animate-fade-in', 'visible');
-    toggleAnimationOnScroll('animate-rotate', 'visible');
-    toggleAnimationOnScroll('animate-bounce', 'visible');
-    toggleAnimationOnScroll('animate-flip', 'visible');
-    toggleAnimationOnScroll('animate-slide-in-left', 'visible');
-    toggleAnimationOnScroll('animate-slide-in-right', 'visible');
-    toggleAnimationOnScroll('animate-color-change', 'visible');
-});
-
-// Initial check on page load
-document.addEventListener('DOMContentLoaded', function() {
-    toggleAnimationOnScroll('animate-slide-up', 'visible');
-    toggleAnimationOnScroll('animate-scale', 'visible');
-    toggleAnimationOnScroll('animate-fade-in', 'visible');
-    toggleAnimationOnScroll('animate-rotate', 'visible');
-    toggleAnimationOnScroll('animate-bounce', 'visible');
-    toggleAnimationOnScroll('animate-flip', 'visible');
-    toggleAnimationOnScroll('animate-slide-in-left', 'visible');
-    toggleAnimationOnScroll('animate-slide-in-right', 'visible');
-    toggleAnimationOnScroll('animate-color-change', 'visible');
-});
 
 /* #######################          ????????????   *   ????????????          ####################### */
 function setVhProperty() {

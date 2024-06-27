@@ -737,10 +737,13 @@ a{
     border-radius: 50px;
     margin-right: 10px;
     cursor: pointer;
+    transform: scale(.7);
+    transition: transform .5s;
 }
 .landing .bullets li.active{
 background-color: var(--main-color);
 border-color: var(--main-color);
+transform: scale(1);
 }
 /* END LANDING */
 
