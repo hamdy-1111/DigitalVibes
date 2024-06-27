@@ -6,136 +6,37 @@
     <title>Digital vibe</title>
     <link rel="icon" type="image/x-icon" href="images/logo/logo svg transparent.svg">
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/all.min.css">
-    <link rel="stylesheet" href="css/master.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/d36d507b4c.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/master.css">
 <style>
-    @import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
-
-:root {
-  --bg: #fff;
-  --text: #7288a2;
-  --gray: #4d5974;
-  --lightgray: #e5e5e5;
-  --blue: #03b5d2;
-}
-
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Hind', sans-serif;
-  background: #000;
-  color: var(--gray);
-  display: flex;
-  min-height: 100vh;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
 }
 
-.cover {
-  margin: 100px auto;
-  padding: 4rem;
-  width: 48rem;
+main {
+    padding: 2rem;
+    padding-top: 200px;
 }
 
-.accordion .accordion-item {
-  border-bottom: 1px solid var(--lightgray);
+section {
+    margin-bottom: 2rem;
 }
 
-.accordion button {
-  position: relative;
-  display: block;
-  text-align: left;
-  width: 100%;
-  padding: 1em 0;
-  color: var(--text);
-  font-size: 1.15rem;
-  font-weight: 400;
-  border: none;
-  background: none;
-  outline: none;
+h1, h2 {
+    color: #fff;
 }
 
-.accordion button:hover,
-.accordion button:focus {
-  cursor: pointer;
-  color: var(--blue);
+ul {
+    list-style-type: disc;
+    margin-left: 1.5rem;
 }
 
-.accordion button:hover::after,
-.accordion button:focus::after {
-  cursor: pointer;
-  color: var(--blue);
-  border: 1px solid var(--blue);
-}
-
-.accordion .accordion-title {
-  padding: 1em 1.5em 1em 0;
-}
-
-.accordion .icon {
-  display: inline-block;
-  position: absolute;
-  top: 18px;
-  right: 0;
-  width: 22px;
-  height: 22px;
-  border: 1px solid;
-  border-radius: 22px;
-}
-
-.accordion .icon::before {
-  display: block;
-  position: absolute;
-  content: '';
-  top: 9px;
-  left: 5px;
-  width: 10px;
-  height: 2px;
-  background: currentColor;
-}
-
-.accordion .icon::after {
-  display: block;
-  position: absolute;
-  content: '';
-  top: 5px;
-  left: 9px;
-  width: 2px;
-  height: 10px;
-  background: currentColor;
-}
-
-.accordion button[aria-expanded='true'] {
-  color: var(--blue);
-}
-
-.accordion button[aria-expanded='true'] .icon::after {
-  width: 0;
-}
-
-.accordion button[aria-expanded='true'] + .accordion-content {
-  opacity: 1;
-  max-height: 9em;
-  transition: all 200ms linear;
-  will-change: opacity, max-height;
-}
-
-.accordion .accordion-content {
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 200ms linear, max-height 200ms linear;
-  will-change: opacity, max-height;
-}
-
-.accordion .accordion-content p {
-  font-size: 1rem;
-  font-weight: 300;
-  margin: 2em 0;
+address {
+    font-style: normal;
 }
 
 </style>
@@ -151,7 +52,6 @@ body {
                     <li><a href="portfolio.html" class="soundButton fileLink" data-sound="clickSoundGroup3">portfolio</a></li>
                     <li><a href="pricing.html" >Pricing</a></li>
                     <li><a href="" class="soundButton fileLink" data-sound="clickSoundGroup3">community <span class="soon" style="left: -15px; top: -15px;">soon</span></a></li>
-                    <li><a href="contact.html" >Contact</a></li>
                     <li><a href="about.html" >About</a></li>
                 </ul>
                     <button class="loginBtn">
@@ -162,7 +62,7 @@ body {
             </nav>
         </div>
     </header>
-    
+
 <!--START loader -->
 <div id="loader">
     <div class="loader-content">
@@ -285,46 +185,48 @@ body {
 </div>
 <!--END loader -->
 
+    <main>
+        <section id="introduction">
+            <h1>Privacy Policy</h1>
+            <p>At Digital Vibes, we respect your privacy and are committed to protecting your personal data. This policy explains how we handle your information.</p>
+        </section>
 
-<div class="cover">
-  <h2>Frequently Asked Questions</h2>
-  <div class="accordion">
-    <div class="accordion-item">
-      <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">What services does Digital Vibes offer?</span><span class="icon" aria-hidden="true"></span></button>
-      <div class="accordion-content">
-        <p>Digital Vibes specializes in web development, mobile application development, and graphics design. We offer tailored solutions to meet the unique needs of our clients, whether it's creating a stunning website, developing a custom mobile app, or designing captivating graphics.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">How experienced is the team at Digital Vibes?</span><span class="icon" aria-hidden="true"></span></button>
-      <div class="accordion-content">
-        <p>Our team consists of highly experienced professionals with years of expertise in their respective fields. We have a proven track record of delivering high-quality digital solutions to clients across various industries, ensuring that every project is executed to perfection.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">What sets Digital Vibes apart from other digital agencies?</span><span class="icon" aria-hidden="true"></span></button>
-      <div class="accordion-content">
-        <p>At Digital Vibes, we pride ourselves on our commitment to quality, affordability, and customer satisfaction. We combine cutting-edge technology with creative innovation to deliver results that exceed expectations. Our collaborative approach, attention to detail, and dedication to our clients' success set us apart from the competition.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">Can Digital Vibes accommodate custom project requirements?</span><span class="icon" aria-hidden="true"></span></button>
-      <div class="accordion-content">
-        <p>Yes, absolutely! We understand that every project is unique, and we're fully equipped to accommodate custom requirements. Whether you have specific design preferences, functionality needs, or integration requirements, our team will work closely with you to bring your vision to life.</p>
-      </div>
-    </div>
-    <div class="accordion-item">
-      <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">What support does Digital Vibes provide after project completion?</span><span class="icon" aria-hidden="true"></span></button>
-      <div class="accordion-content">
-        <p>Our relationship with clients extends far beyond project completion. We provide ongoing support and assistance to ensure that your digital assets continue to perform optimally. Whether you need technical support, updates, or additional services, we're here to help every step of the way.</p>
-      </div>
-    </div>
-  </div>
-</div>
+        <section id="data-collection">
+            <h2>Data Collection</h2>
+            <p>We collect various types of information in connection with the services we provide, including:</p>
+            <ul>
+                <li>Information you provide directly to us.</li>
+                <li>Information we collect about your use of our services.</li>
+                <li>Information from third parties.</li>
+            </ul>
+        </section>
 
-<button id="scrollTopBtn" onclick="scrollToTop()" class="soundButton" data-sound="clickSoundGroup1"><i class="fa-solid fa-jet-fighter-up"></i></button>
+        <section id="data-use">
+            <h2>Data Use</h2>
+            <p>We use your information to:</p>
+            <ul>
+                <li>Provide, operate, and maintain our services.</li>
+                <li>Improve, personalize, and expand our services.</li>
+                <li>Communicate with you, either directly or through one of our partners.</li>
+            </ul>
+        </section>
 
+        <section id="data-protection">
+            <h2>Data Protection</h2>
+            <p>We implement a variety of security measures to maintain the safety of your personal information when you enter, submit, or access your personal information.</p>
+        </section>
 
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us at:</p>
+            <address>
+                Digital Vibes<br>
+                53 Main Street,<br>
+                The 5th Settlement, Industrial Area, 11835
+                Email: <a href="mailto:info@digitalvibes.com">info@digitalvibes.com</a>
+            </address>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
@@ -369,38 +271,7 @@ body {
             </div>
         </div>
     </footer>
-
-<!-- sounds -->
-<audio id="clickSoundGroup1" src="sounds/mixkit-cool-interface-click-tone-2568.wav"></audio> 
-<audio id="clickSoundGroup2" src="sounds/mixkit-negative-tone-interface-tap-2569.wav"></audio>
-<audio id="clickSoundGroup3" src="sounds/mixkit-modern-technology-select-3124.wav"></audio>
-<script>
-    const items = document.querySelectorAll(".accordion button");
-
-function toggleAccordion() {
-  const itemToggle = this.getAttribute('aria-expanded');
-  
-  for (i = 0; i < items.length; i++) {
-    items[i].setAttribute('aria-expanded', 'false');
-  }
-  
-  if (itemToggle == 'false') {
-    this.setAttribute('aria-expanded', 'true');
-  }
-}
-
-items.forEach(item => item.addEventListener('click', toggleAccordion));
-</script>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var myAudio = document.getElementById('myAudio');
-        myAudio.volume = 0.5; // Set volume to 50%
-    });
-</script>
-<!-- sounds -->
-
-
-
 <script src="js/main.js"></script>
+
 </body>
 </html>

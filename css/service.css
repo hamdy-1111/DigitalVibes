@@ -56,21 +56,3 @@ body{
     color: #19c8fa;
     margin-top: 200px;
 }
-footer {
-    background-color: var(--main-color);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-.social-icons {
-    margin-top: 10px;
-}
-
-.social-icons a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-    font-size: 24px;
-}
-

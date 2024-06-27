@@ -1199,6 +1199,7 @@ text-align: center;
 
 .app-showcase {
     padding-bottom: var(--section-padding);
+    overflow: hidden;
 }
 
 .app {
@@ -1891,6 +1892,7 @@ transition: all 0.3s ease-in-out 0s;
 #testimonial-area{
   margin-top: 150px;
   margin-bottom: 100px;
+  overflow: hidden;
 }
 #testimonial-area .section-heading h2 {
   font-size: 48px;
@@ -2316,6 +2318,7 @@ transition: all 0.3s ease-in-out 0s;
 /* START VIDEO */
 .video{
     position: relative;
+    overflow: hidden;
 }
 .video::before{
     content: '';
