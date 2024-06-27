@@ -738,7 +738,7 @@ a{
     margin-right: 10px;
     cursor: pointer;
     transform: scale(.7);
-    transition: transform .5s;
+    transition: transform 1s, background-color 1s , border-color 1s;
 }
 .landing .bullets li.active{
 background-color: var(--main-color);
@@ -754,6 +754,7 @@ transform: scale(1);
 .services{
     padding-top: var(--section-padding)  ;
     padding-bottom: var(--section-padding);
+    overflow: hidden;
 }
 @media(min-width: 768px){
     .services .services-container{
@@ -1197,7 +1198,6 @@ text-align: center;
 /* END PORTFOLIO */
 
 .app-showcase {
-    padding-top: var(--section-padding)  ;
     padding-bottom: var(--section-padding);
 }
 
@@ -1330,6 +1330,7 @@ text-align: center;
     display: inline-block;
     margin: 20px;
     position: relative;
+    text-align: center;
 }
 
 @media (min-width: 768px) {
