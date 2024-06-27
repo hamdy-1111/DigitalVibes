@@ -173,6 +173,7 @@ footer{
   left: 50%;
   transform: translateX(-50%);
   margin-top: -90px;
+  text-decoration: none;
 }
 
 #btn:hover,
@@ -195,7 +196,7 @@ footer{
             height: 0; /* Adjust the height of the progress bar */
             width: 10px; /* Initially set the width to 0 */
             background: linear-gradient( #022d8a,#022d8a,#022d8a,#022d8a,#022d8a,#022d8a, #cc00ff , #cc00ff , #ae419c); /* Set the color of the progress bar */
-            z-index: 9995; /* Ensure the progress bar is above other content */
+            z-index: 995; /* Ensure the progress bar is above other content */
             border-radius: 20px;
             transition: height 0.3s; /* Add transition effect for smoother appearance */
         }
@@ -207,7 +208,7 @@ footer{
             width: 10px; /* Adjust the width of the line */
             height: 2190px; /* Adjust the height of the line */
             background-color: #333; 
-            z-index: 9994;
+            z-index: 994;
             border-radius: 20px;
         }
 
@@ -327,15 +328,20 @@ display: none;
 
 #btn.animate {
     opacity: 0;
-    transform: scale(0);
 }
 
 #btn.animate.active {
-    animation: zoomIn 1s forwards;
+    animation: flash 1s forwards;
 }
 
 #btn.animate.inactive {
     animation: zoomOut 1s forwards;
+      color: #ffffff;
+  background: #008cff;
+  border: 1px solid #008cff;
+  text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff, 0 0 20px #ffffff;
+  box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff,
+    0 0 100px #008cff;
 }
     </style>
 </head>
@@ -525,15 +531,9 @@ display: none;
                 <p class="position">Front-end Developer</p>
                 <div class="social-media-links">
                     <a target="_blank" href="https://www.facebook.com/noopsaibot"><i class="fab fa-facebook-f"></i></a>
-                    <a target="_blank" href="https://twitter.com/HamdyELmenshawi"><i class="fab fa-twitter"></i></a>
-                    <a target="_blank" href="https://www.instagram.com/hamdyelmenshawei"><i class="fab fa-instagram"></i></a>
-                    <a target="_blank" href="https://www.linkedin.com/in/noopsaibot"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <div class="social-media-links" style="margin-top: -10px;">
-                    <a class="footer-call-to-action-link" href="tel:+201080876548" target="_self"><i class="fa-solid fa-phone"></i></a>
                     <a href="https://discordapp.com/users/noopsaibot909" target="_blank" class="contact-icon"><i class="fa-brands fa-discord"></i></a>
-                    <a href="https://wa.me/1080876548" target="_blank" class="contact-icon"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://m.me/noopsaibot" target="_blank" class="contact-icon"><i class="fa-brands fa-facebook-messenger"></i></a>
+                    <a class="footer-call-to-action-link" href="tel:+201080876548" target="_self"><i class="fa-solid fa-phone"></i></a>
+                    <a target="_blank" href="https://www.linkedin.com/in/noopsaibot"><i class="fab fa-linkedin-in"></i></a>
                 </div>
             </div>
 
@@ -553,24 +553,23 @@ display: none;
 
             <div class="team-card animate">
                 <div class="img-wrapper">
-                    <img class="team-img" src="images/team/maxwell.jpg" style="height: 232px;">
+                    <img class="team-img" src="images/team/sakkara.png" style="height: 232px;">
                 </div>
-                <p class="name">Maxwell Doe</p>
-                <p class="position">Instructor</p>
+                <p class="name">Mo sakkara</p>
+                <p class="position">Audit controller</p>
                 <div class="social-media-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://www.facebook.com/mohamed.a.sakkara.7"><i class="fab fa-facebook-f"></i></a>
+                    <a class="footer-call-to-action-link" href="tel:+201019843939" target="_self"><i class="fa-solid fa-phone"></i></a>
+                    <a href="https://www.instagram.com/kingsakkara/"><i class="fab fa-instagram"></i></a>
                 </div>
             </div>
 
             <div class="team-card animate">
                 <div class="img-wrapper">
-                    <img class="team-img" src="images/team/maxwell.jpg" style="height: 232px;">
+                    <img class="team-img" src="images/team/pexels-croft-alexander-747385-1624229.jpg" style="height: 232px;">
                 </div>
-                <p class="name">Maxwell Doe</p>
-                <p class="position">Instructor</p>
+                <p class="name">lily Doe</p>
+                <p class="position">It instructor</p>
                 <div class="social-media-links">
                     <a href="#"><i class="fab fa-facebook-f"></i></a>
                     <a href="#"><i class="fab fa-twitter"></i></a>

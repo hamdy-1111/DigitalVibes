@@ -1190,31 +1190,23 @@ text-align: center;
 /* END PORTFOLIO */
 
 .app-showcase {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 30px;
-    margin: 20px auto;
-    border-radius: 10px;
-    max-width: 80%;
-    position: relative;
-    background-color: #314e56;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding-top: var(--section-padding)  ;
+    padding-bottom: var(--section-padding);
 }
 
 .app {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 30px;
-    background-color: transparent;
     border-radius: 10px;
-    max-width: 100%;
-    width: 100%;
     position: relative;
-    margin-top: 40px;
+    flex-wrap: wrap;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    border-radius: 10px;
+    background: linear-gradient(145deg, #1f1c2c, #5f727f);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .app-info {
@@ -1257,20 +1249,6 @@ text-align: center;
     margin-bottom: 20px;
     line-height: 1.6;
     font-size: 1rem;
-}
-
-.app-screenshot {
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
-    text-align: center;
-}
-
-.app-screenshot img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .download-buttons {
@@ -1339,45 +1317,21 @@ text-align: center;
 #timeRemain {
     font-size: 1.2rem;
     font-weight: bold;
-    color: #333;
-    background-color: #f7f7f7;
+    color: #e91e63;
     padding: 10px 20px;
     border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     display: inline-block;
     margin: 20px;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.app-showcase svg.l {
-    position: absolute;
-    top: -130px;
-    right: 30px;
-    width: 200px;
-    transform: rotate(.1turn);
-    opacity: .4;
+    position: relative;
 }
 
 @media (min-width: 768px) {
-    .app {
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: flex-start;
-    }
-
     .app-info {
         width: 50%;
     }
 
     .app-screenshot {
         width: 50%;
-    }
-}
-@media (max-width: 1000px) {
-    .app-showcase {
-        max-width: 70%;
     }
 }
 
@@ -3382,7 +3336,98 @@ ul{
 }
 
 .testi-wrap.animate.active {
-    -webkit-animation: slideInLeft 1s forwards;
-            animation: slideInLeft 1s forwards;
+    -webkit-animation: slideInLeft 2s forwards;
+            animation: slideInLeft 2s forwards;
 }
 
+.app-showcase.animate {
+    opacity: 0;
+    transform: rotateY(-180deg);
+}
+
+.app-showcase.animate.active {
+    -webkit-animation: flipInY 1s forwards;
+            animation: flipInY 1s forwards;
+}
+
+.app-showcase.animate.inactive {
+    -webkit-animation: flipOutY 1s forwards;
+            animation: flipOutY 1s forwards;
+}
+
+#timeRemain.animate {
+    opacity: 0;
+}
+
+#timeRemain.animate.active {
+    -webkit-animation: fadeIn 1s forwards, pulse 2s infinite;
+            animation: fadeIn 1s forwards, pulse 2s infinite, ;
+}
+
+#timeRemain.animate.inactive {
+    -webkit-animation: fadeOut 1s forwards;
+            animation: fadeOut 1s forwards;
+}
+
+.app-info.animate {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+.app-info.animate.active {
+    -webkit-animation: slideInLeft 1s forwards, bounceIn 1.5s forwards;
+            animation: slideInLeft 1s forwards, bounceIn 1.5s forwards;
+}
+
+.app-info.animate.inactive {
+    -webkit-animation: slideOutUp 1s forwards;
+            animation: slideOutUp 1s forwards;
+}
+
+.app-icon.animate {
+    transform: scale(0);
+}
+
+.app-icon.animate.active {
+    -webkit-animation: zoomIn 1s forwards, rubberBand 1s 1.5s;
+            animation: zoomIn 1s forwards, rubberBand 1s 1.5s;
+}
+
+.app-icon.animate.inactive {
+    -webkit-animation: zoomOut 1s forwards;
+            animation: zoomOut 1s forwards;
+}
+
+.tagline.animate {
+    opacity: 0;
+}
+
+.tagline.animate.active {
+    -webkit-animation: fadeIn 1s forwards, flash 2s infinite 1s;
+            animation: fadeIn 1s forwards, flash 2s infinite 1s;
+}
+
+.tagline.animate.inactive {
+    -webkit-animation: fadeOut 1s forwards;
+            animation: fadeOut 1s forwards;
+}
+
+.app-description.animate {
+
+}
+
+
+
+.download-buttons.animate {
+    opacity: 0;
+}
+
+.download-buttons.animate.active {
+    -webkit-animation: fadeIn 1s forwards, swing 1s 1.5s;
+            animation: fadeIn 1s forwards, swing 1s 1.5s;
+}
+
+.download-buttons.animate.inactive {
+    -webkit-animation: fadeOut 1s forwards;
+            animation: fadeOut 1s forwards;
+}
