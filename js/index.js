@@ -264,7 +264,7 @@ function updateCountdown(endDate) {
         document.getElementById('hours').textContent = '';
         document.getElementById('minutes').textContent = '';
         document.getElementById('seconds').textContent = '';
-        document.getElementById('timeRemain').textContent = 'this moment forever';
+        document.getElementById('timeRemain').textContent = 'available forever';
         return; // Exit the function to avoid displaying negative values
     }
 
