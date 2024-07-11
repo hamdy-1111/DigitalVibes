@@ -258,6 +258,16 @@ function updateCountdown(endDate) {
     const now = new Date().getTime(); // Current timestamp
     const distance = endDate - now; // Time difference between now and the target date
 
+    if (distance < 0) {
+        clearInterval(timerInterval); // Stop the countdown timer
+        document.getElementById('days').textContent = '';
+        document.getElementById('hours').textContent = '';
+        document.getElementById('minutes').textContent = '';
+        document.getElementById('seconds').textContent = '';
+        document.getElementById('timeRemain').textContent = 'this moment forever';
+        return; // Exit the function to avoid displaying negative values
+    }
+
     // Calculate time components: days, hours, minutes, seconds
     const days = Math.floor(distance / (1000 * 60 * 60 * 24));
     const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -269,21 +279,11 @@ function updateCountdown(endDate) {
     document.getElementById('hours').textContent = hours + ' hours';
     document.getElementById('minutes').textContent = minutes + ' minutes';
     document.getElementById('seconds').textContent = seconds + ' seconds';
-
-    // If the countdown is over, display "this moment forever" or take appropriate action
-    if (distance < 0) {
-        clearInterval(timerInterval); // Stop the countdown timer
-        document.getElementById('days').textContent = '';
-        document.getElementById('hours').textContent = '';
-        document.getElementById('minutes').textContent = '';
-        document.getElementById('seconds').textContent = '';
-        document.getElementById('timeRemain').textContent = 'this moment forever';
-    }
 }
 
 // Function to start the countdown timer
 function startCountdown() {
-    // Define the end date as July 12, 2024
+    // Define the end date as July 11, 2024
     const endDate = new Date('2024-07-11T00:00:00Z').getTime(); // Convert to milliseconds since Unix epoch
 
     // Initial call to update the countdown immediately
@@ -299,7 +299,6 @@ function startCountdown() {
 document.addEventListener('DOMContentLoaded', function() {
     startCountdown();
 });
-
 
 
 
