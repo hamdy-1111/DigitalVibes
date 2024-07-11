@@ -277,7 +277,7 @@ function updateCountdown(endDate) {
 
 // Function to start the countdown timer
 function startCountdown() {
-    // Define the end date as July 7, 2024
+    // Define the end date as July 12, 2024
     const endDate = new Date('2024-07-12T00:00:00Z').getTime(); // Convert to milliseconds since Unix epoch
 
     // Initial call to update the countdown immediately
