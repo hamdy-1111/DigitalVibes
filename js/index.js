@@ -258,7 +258,7 @@ function updateCountdown(endDate) {
     const now = new Date().getTime(); // Current timestamp
     const distance = endDate - now; // Time difference between now and the target date
 
-    if (distance < 0) {
+    if (distance <= 0) {
         clearInterval(timerInterval); // Stop the countdown timer
         document.getElementById('days').textContent = '';
         document.getElementById('hours').textContent = '';
