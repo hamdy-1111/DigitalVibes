@@ -251,6 +251,8 @@ document.addEventListener('DOMContentLoaded', startCountersWhenVisible);
 
 
 
+let timerInterval; // Declare timerInterval outside the functions
+
 // Function to update the countdown timer
 function updateCountdown(endDate) {
     const now = new Date().getTime(); // Current timestamp
@@ -271,6 +273,10 @@ function updateCountdown(endDate) {
     // If the countdown is over, display "this moment forever" or take appropriate action
     if (distance < 0) {
         clearInterval(timerInterval); // Stop the countdown timer
+        document.getElementById('days').textContent = '';
+        document.getElementById('hours').textContent = '';
+        document.getElementById('minutes').textContent = '';
+        document.getElementById('seconds').textContent = '';
         document.getElementById('timeRemain').textContent = 'this moment forever';
     }
 }
@@ -284,7 +290,7 @@ function startCountdown() {
     updateCountdown(endDate);
 
     // Update the countdown every second (1000 milliseconds)
-    const timerInterval = setInterval(function() {
+    timerInterval = setInterval(function() {
         updateCountdown(endDate);
     }, 1000);
 }
@@ -293,7 +299,6 @@ function startCountdown() {
 document.addEventListener('DOMContentLoaded', function() {
     startCountdown();
 });
-
 
 
 
