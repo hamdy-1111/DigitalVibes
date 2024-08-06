@@ -148,7 +148,7 @@ sidebar.classList.add("close");
 
 // Function to show the sidebar when the mouse enter
 const showSidebar = () => {
-if (sidebar.classList.contains("hoverable")) {
+if (sidebar.classList.contains("close")) {
 sidebar.classList.remove("close");
 }
 };
@@ -166,9 +166,15 @@ sidebar.classList.remove("hoverable");
 }
 
 // Adding event listeners to buttons and sidebar for the corresponding actions
+
 sidebarLockBtn.addEventListener("click", toggleLock);
-sidebar.addEventListener("mouseleave", hideSidebar);
-sidebar.addEventListener("mouseenter", showSidebar);
+// For desktop (mouse events)
+sidebar.addEventListener("mouseover", showSidebar);
+sidebar.addEventListener("mouseout", hideSidebar);
+
+// For mobile (touch events)
+sidebar.addEventListener("touchstart", showSidebar);
+sidebar.addEventListener("touchend", hideSidebar);
 sidebarOpenBtn.addEventListener("click", toggleSidebar);
 sidebarCloseBtn.addEventListener("click", toggleSidebar);
 

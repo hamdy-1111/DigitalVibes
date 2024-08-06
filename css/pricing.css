@@ -1,6 +1,9 @@
 body
 {
     background-color: #181828;
+    background-image:url("https://1.bp.blogspot.com/-Fo3iRt97ZXY/XvSG4EMwi0I/AAAAAAAAVEo/mrApRTcVVRk1m-fX9K-ffNwRUXlHUocdwCLcBGAsYHQ/s1600/h.jpg");
+
+background-color: #181828;
 }
 :root{
     --nav-main-color: #03a9f4;
@@ -10,12 +13,12 @@ body
 }
 #mainCoantiner
 {
-background-image:url("https://1.bp.blogspot.com/-Fo3iRt97ZXY/XvSG4EMwi0I/AAAAAAAAVEo/mrApRTcVVRk1m-fX9K-ffNwRUXlHUocdwCLcBGAsYHQ/s1600/h.jpg");
-
-background-color: #181828;
 height:100%;
 width:100%;
 padding-bottom: 50px;
+scale: .8;
+position: relative;
+right: -30px;
 }
 /*  ################################   START most important thing in this file   ################################  */
 .starsec{
@@ -550,14 +553,13 @@ padding-top: 15px;
 margin-top: 15px;
 gap: 15px;
 border-top: 2px solid rgba(0, 0, 0, 0.1);
+color: #fff;
 }
 .sidebar_profile .name {
 font-size: 18px;
-color: #333;
 }
 .sidebar_profile .email {
 font-size: 15px;
-color: #333;
 }
 
 
@@ -599,4 +601,13 @@ color: #333;
 }
 .bx-chevron-down-circle{
     color:  var(--nav-2nd-color);
+}
+
+
+@media (max-width: 500px) {
+.footer {
+    position: absolute;
+    right: -10px;
+    left: 59px;
+}
 }
